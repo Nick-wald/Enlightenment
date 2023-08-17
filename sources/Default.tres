@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cnw25cdhcyxjc"]
+
+[ext_resource type="FontFile" uid="uid://dt8k30c14r87d" path="res://sources/fonts/VonwaonBitmap-16px.ttf" id="1_iq63x"]
+
+[resource]
+default_font = ExtResource("1_iq63x")
+default_font_size = 32
+ProgressBar/colors/font_color = Color(0.960784, 0.960784, 0.862745, 1)
+RichTextLabel/colors/default_color = Color(0.960784, 0.960784, 0.862745, 1)

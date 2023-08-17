@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2ymd86ck64ab"]
+
+[ext_resource type="Script" path="res://AutoLoad/AudioManager.gd" id="1_ivpps"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_ivpps")
+
+[node name="BGS_GROUP" type="Node" parent="."]
+
+[node name="SFX_GROUP" type="Node" parent="."]
+
+[node name="BGM_GROUP" type="Node" parent="."]
+
+[node name="BGM_Player" type="AudioStreamPlayer" parent="BGM_GROUP"]
+
+[node name="UI_GROUP" type="Node" parent="."]
+
+[node name="UI_Player" type="AudioStreamPlayer" parent="UI_GROUP"]
+
+[node name="BATTLE_GROUP" type="Node" parent="."]
+
+[node name="TRANSITION_GROUP" type="Node" parent="."]
+
+[node name="TALK_GROUP" type="Node" parent="."]

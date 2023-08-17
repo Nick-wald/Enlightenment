@@ -1,0 +1,20 @@
+{
+	"Beginning": "Beginning",
+	"Transition": "Transition",
+	"version": "1.0.0",
+	"scenes": [
+		{
+			"name": "Beginning",
+			"pausable": false
+		},
+		{
+			"name": "Transition",
+			"pausable": false
+		},
+		{
+			"name": "BeelzebubCastle",
+			"ShowName": "魔王城"
+		}
+	],
+	
+}

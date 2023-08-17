@@ -1,0 +1,46 @@
+{
+	"Basic": "AutoLoad",
+	"Start":[
+	],
+	"version": "1.0.0",
+	"systems": [
+		{
+			"name": "AudioManager",
+		},
+		{
+			"name": "EntityManager",
+			"child": [
+				"EntityModel"
+			]
+		},
+		{
+			"name": "CharacterManager",
+			"child": [
+				"CharacterModel"
+			]
+		},
+		{
+			"name": "ItemManager",
+			"child": [
+				"ItemModel"
+			]
+		},
+		{
+			"name": "EnvManager"
+		},
+		{
+			"name": "GameManager"
+		},
+		{
+			"name": "TOP",
+			"layer": "100"
+		},
+		{
+			"name": "GUIManager",
+			"layer": "99",
+			"child": [
+				"GUIModel"
+			]
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"version": "1.0.0",
+	"BGM": {
+		"Transition": [
+			"/BGM/Enlightment.ogg"
+		],
+		"Beginning": [
+			"/BGM/Enlightment.ogg"
+		],
+		"Default": [
+			"/BGM/Enlightment.ogg"
+		]
+	},
+	"UI": {
+		"ButtomClick": "/UI/ButtomClick.wav",
+		"ButtomCancel": "/UI/ButtomCancel.wav",
+		"ButtomApply": "/UI/ButtomApply.wav"
+	}
+}

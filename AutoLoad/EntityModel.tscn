@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://br6xhlj54sx57"]
+
+[ext_resource type="Script" path="res://AutoLoad/EntityModel.gd" id="1_1upjn"]
+
+[node name="EntityModel" type="Node"]
+script = ExtResource("1_1upjn")
+
+[node name="EntityCharacter" type="Node" parent="."]
+
+[node name="EntityThing" type="Node" parent="."]
+
+[node name="EntiyBox" type="Node" parent="EntityThing"]
+
+[node name="EntityDoor" type="Node" parent="EntityThing"]
