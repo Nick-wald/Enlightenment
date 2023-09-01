@@ -8,7 +8,8 @@ func _process(_delta):
 
 # 退出按钮
 func _on_quit_pressed() -> void:
-	Global.AutoLoad.QUITGAME()
+	await (Global.USENODE("AudioManager") as AudioManager).UIPlayer.finished
+	(Global.AutoLoad as AutoLoad).QUITGAME()
 
 # 开始按钮
 func _on_begin_pressed() -> void:

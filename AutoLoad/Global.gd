@@ -12,7 +12,11 @@ var TransitionTip:Dictionary
 # AutoLoad
 @onready var AutoLoad:AutoLoad = get_node("/root/AutoLoad")
 # 当前场景
-var current_scene:String = "null" 
+var current_scene:String = "null":
+	set(value):
+		current_scene = value
+		(Global.USENODE("AudioManager") as AudioManager).BGMtran(current_scene)
+
 var SceneStack:Array = []
 # 禁止暂停列表
 var UnpausableScenesList:Array = []

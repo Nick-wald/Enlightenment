@@ -12,7 +12,7 @@ const ChattingTimeLimiter:float = 5
 ### 变量
 ## 显示设置
 # 窗口模式
-var showmode:String = "window_fullscreen"
+var showmode:String = Global.Setting["config"]["Video"]["Showmode"][0]
 # 窗口大小
 var windowSize:Vector2i = DisplayServer.screen_get_size()
 # 窗口刷新率
@@ -22,8 +22,7 @@ var lang:String = OS.get_locale_language()
 # GUI对象池
 var GUIHandlers:Array = []
 func _ready():
-	showmode = Global.Setting["config"]["Video"]["Showmode"][0]
-	
+	changeShowmode()
 
 func _process(_delta):
 	pass
@@ -33,7 +32,10 @@ func ChattingBoxCreator():
 	pass
 
 # 更改显示模式
-func changeShowmode(mode:String = "null", size:Rect2i = Rect2i(), title:String = "null"):
+func changeShowmode(mode:String = "", size:Rect2i = Rect2i(Vector2i(0, 0), windowSize), title:String = "Enlightenment"):
+	showmode = Global.Setting["config"]["Video"]["Showmode"][0]
+	if mode.is_empty():
+		mode = showmode
 	match mode:
 		"fullscreen":
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
@@ -44,10 +46,12 @@ func changeShowmode(mode:String = "null", size:Rect2i = Rect2i(), title:String =
 		"window":
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			showmode = mode
+		_:
+			(Global.USENODE("TOP") as TOP).CONSOLEWARN("Unexpected showmode string: " + mode, "GUIManager.changeShowmode()")
 	if not size == Rect2i():
 		DisplayServer.window_set_size(size.size)
 	if not title == "null":
-		Window.title = title
+		DisplayServer.window_set_title(title)
 
 # 设置鼠标样式
 func setCursor(mode:String = "null", custom_img_path:String = "null"):
@@ -61,21 +65,24 @@ func setCursor(mode:String = "null", custom_img_path:String = "null"):
 				pass
 
 # GUI注册器
-func GUIRegister(node:Node) -> void:
+func GUIRegister(node:Node, arg:Array = Array()) -> void:
 	if node.has_method("_GUI_init"):
 		GUIHandlers.append(node.get_instance_id())
 		UILayer.add_child(node)
-		node.call("_GUI_init")
+		if arg.is_empty():
+			node.call("_GUI_init")
+		else:
+			node.callv("_GUI_init", arg)
 	else:
 		(Global.USENODE("TOP") as TOP).CONSOLEERROR("Cannot find method:_GUI_init() in " + node.name + ".", "GUIManager.GUIRegister()")
 
 #GUI模型调取
-func GUIModelBuilder(type:String):
+func GUIModelBuilder(type:String, arg:Array = Array()):
 	var model:Node = get_node("./GUIModel/" + type)
 	if not model == null:
 		var modelCopy:Control = model.duplicate()
 		if not (modelCopy as Control).visible:
 			(modelCopy as Control).set_visible(true)
-		GUIRegister(modelCopy)
+		GUIRegister(modelCopy, arg)
 	else:
 		(Global.USENODE("TOP") as TOP).CONSOLEERROR("Unknown typename " + type + " in GUIModel.", "GUIManager.GUIModelBuilder()")

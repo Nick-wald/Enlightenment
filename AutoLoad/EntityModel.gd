@@ -16,3 +16,10 @@ func _ready():
 
 func _process(delta):
 	pass
+
+# 2D模型获取
+func model2D():
+	pass
+# 3D模型获取
+func model3D():
+	pass

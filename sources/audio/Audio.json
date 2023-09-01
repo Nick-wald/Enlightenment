@@ -2,13 +2,22 @@
 	"version": "1.0.0",
 	"BGM": {
 		"Transition": [
-			"/BGM/Enlightment.ogg"
+			{
+				"song":"/BGM/Enlightment.ogg",
+				"loop": -1
+			}
 		],
 		"Beginning": [
-			"/BGM/Enlightment.ogg"
+			{
+				"song":"/BGM/Enlightment.ogg",
+				"loop": -1
+			}
 		],
 		"Default": [
-			"/BGM/Enlightment.ogg"
+			{
+				"song":"/BGM/Enlightment.ogg",
+				"loop": -1
+			}
 		]
 	},
 	"UI": {

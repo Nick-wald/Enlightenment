@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxl5pjij0odc4"]
+[gd_scene load_steps=11 format=3 uid="uid://dxl5pjij0odc4"]
 
 [ext_resource type="Script" path="res://AutoLoad/GUIModel.gd" id="1_531oo"]
 [ext_resource type="Theme" uid="uid://cnw25cdhcyxjc" path="res://sources/Default.tres" id="1_ni6fh"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://AutoLoad/Setting.gd" id="3_vathi"]
 [ext_resource type="Script" path="res://AutoLoad/DLC.gd" id="5_3ioap"]
 [ext_resource type="Texture2D" uid="uid://r2qm0awehrmv" path="res://icon.svg" id="6_ob4n7"]
+[ext_resource type="Script" path="res://AutoLoad/BarBasic.gd" id="8_kujw8"]
+[ext_resource type="Script" path="res://AutoLoad/ChapterTitle.gd" id="9_ogaqm"]
 [ext_resource type="Texture2D" uid="uid://bx27ke8pwhuh0" path="res://sources/GUI/ChattingBox/paper/1.png" id="50_i7fh5"]
 
 [sub_resource type="Theme" id="Theme_u1st0"]
@@ -27,6 +29,7 @@ theme = ExtResource("1_ni6fh")
 script = ExtResource("1_531oo")
 
 [node name="Setting" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -245,6 +248,24 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 52
 text = "应用"
 metadata/ButtomType = "apply"
+
+[node name="BarBasic" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_kujw8")
+
+[node name="ChapterTitle" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_ogaqm")
 
 [connection signal="pressed" from="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer/Buttoms/Cancel" to="Setting" method="_on_cancel_pressed"]
 [connection signal="pressed" from="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer/Buttoms/Apply" to="Setting" method="_on_apply_pressed"]

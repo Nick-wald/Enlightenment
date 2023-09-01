@@ -1,4 +1,4 @@
-extends EntityModel
+extends EntityCharacter
 class_name CharacterBasic # 人物基本模型
 
 ### 角色卡 Character Sheet

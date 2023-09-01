@@ -33,6 +33,8 @@ func _ready():
 				(j as AudioStreamPlayer).set_bus(StringName(busname))
 			elif j is AudioStreamPlayer2D:
 				(j as AudioStreamPlayer2D).set_bus(StringName(busname))
+	# BGM播放初始化
+	BGMPlayer.finished.connect(Callable(self, "BGMtran"))
 
 func _process(_delta):
 	pass
@@ -51,16 +53,33 @@ func play(player, path:String) -> void:
 		(player as AudioStreamPlayer).play()
 
 # UI声音播放
-func UISound(type:String):
+func UISound(type:String) -> void:
 	if (AudioList["UI"] as Dictionary).has(type):
 		play(UIPlayer, AudioPath + AudioList["UI"][type])
 	else:
 		(Global.USENODE("TOP") as TOP).CONSOLEWARN("Unknown UI sound name: " + type, "AudioManager.UISound()")
 
 # UI音效绑定
-func bindUISound(nodeSignal:Signal, type:String):
+func bindUISound(nodeSignal:Signal, type:String) -> void:
 	nodeSignal.connect(UISound.bind(type))
-
-# BGM声音播放
-func BGMSound():
-	pass
+		
+# BGM播放处理
+func BGMtran(scene:String = "null") -> void:
+	if not scene == "null" and (AudioList["BGM"] as Dictionary).has(scene):
+		if not BGMPlayList.is_empty() and BGMPlayer.playing:
+			BGMPlayList.resize(1)
+		else:
+			BGMPlayList.clear()
+		for item in AudioList["BGM"][scene]:
+			if not BGMPlayList.is_empty() and item["song"] == BGMPlayList[0]["song"]:
+				BGMPlayList[0]["loop"] = item["loop"]
+			else:
+				BGMPlayList.append(item)
+		if not BGMPlayer.playing and not BGMPlayList.is_empty():
+			play(BGMPlayer, AudioPath + BGMPlayList[0]["song"])
+	elif not BGMPlayList.is_empty():
+		if not BGMPlayList[0]["loop"] == 0:
+			BGMPlayList[0]["loop"] -= 1
+		else:
+			BGMPlayList.pop_front()
+		play(BGMPlayer, AudioPath + BGMPlayList[0]["song"])
