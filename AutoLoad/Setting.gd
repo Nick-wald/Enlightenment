@@ -8,6 +8,8 @@ extends GUIModel
 @onready var Config:VBoxContainer = self.get_node("SettingBox/TextureRect/MarginContainer/VBoxContainer/ConfigContainer/Configs")
 # 解释区
 @onready var Description:Label = self.get_node("SettingBox/TextureRect/MarginContainer/VBoxContainer/Description")
+# 应用按钮
+@onready var Apply:Button = self.get_node("SettingBox/TextureRect/MarginContainer/VBoxContainer/Buttoms/Apply")
 ### 变量
 # 设置副本
 var SettingCopy:Dictionary
@@ -24,16 +26,27 @@ func _GUI_init():
 	updateConfigArea(ConfigTab.get_child(0).get_meta("ConfigTab"))
 	super()
 
-func _on_apply_pressed():
+func _on_apply_pressed() -> void:
 	Global.Setting = SettingCopy
+	(Global.AutoLoad as AutoLoad).WRITEINI()
 	queue_free()
 
-func _on_cancel_pressed():
+func _on_cancel_pressed() -> void:
+	(Global.USENODE("GUIManager") as GUIManager).changeShowmode(
+		Global.Setting["config"]["Video"]["Showmode"][0],
+		Rect2i(
+			0,
+			0,
+			int((Global.Setting["config"]["Video"]["Size"][0] as String).get_slice("x", 0)),
+			int((Global.Setting["config"]["Video"]["Size"][0] as String).get_slice("x", 1))
+		)
+		)
+	for item in (Global.Setting["config"]["Audio"] as Dictionary).keys():
+		(Global.USENODE("AudioManager") as AudioManager).set_vol(item, Global.Setting["config"]["Audio"][item])
 	queue_free()
 
 # 更新设置区内容
-func updateConfigArea(tab:String):
-	print(SettingCopy)
+func updateConfigArea(tab:String) -> void:
 	if not Config.get_children().is_empty():
 		for item in Config.get_children():
 			item.queue_free()
@@ -58,6 +71,9 @@ func updateConfigArea(tab:String):
 						if SettingCopy["config"][tab][item][index] == SettingCopy["config"][tab][item][0]:
 							i.select(index - 1)
 						index += 1
+					i.set_meta("tab", tab)
+					i.set_meta("item", item)
+					i.item_selected.connect(updateSetting.bind(tab, item, i).unbind(1))
 					configGroup.add_child(i)
 					Config.add_child(configGroup)
 				TYPE_STRING:
@@ -74,5 +90,31 @@ func updateConfigArea(tab:String):
 					i.max_value = 1
 					i.step = 0.01
 					i.value = SettingCopy["config"][tab][item]
+					i.set_meta("tab", tab)
+					i.set_meta("item", item)
+					i.value_changed.connect(updateSetting.bind(tab, item, i).unbind(1))
 					configGroup.add_child(i)
 					Config.add_child(configGroup)
+
+# 更新设置&预览
+func updateSetting(tab:String, item:String, value) -> void:
+	(Global.USENODE("TOP") as TOP).CONSOLE(str(tab) + " " + str(item) + " " + str(value))
+	match typeof(SettingCopy["config"][tab][item]):
+		TYPE_BOOL:
+			SettingCopy["config"][tab][item] = value
+		TYPE_ARRAY:
+			SettingCopy["config"][tab][item][0] = (value as OptionButton).get_item_text((value as OptionButton).selected)
+			if tab == "Video" and item == "Showmode":
+				(Global.USENODE("GUIManager") as GUIManager).changeShowmode(SettingCopy["config"][tab][item][0])
+			if tab == "Video" and item == "Size":
+				(Global.USENODE("GUIManager") as GUIManager).changeShowmode("null", Rect2i(0, 0, int((SettingCopy["config"]["Video"]["Size"][0] as String).get_slice("x", 0)), int((SettingCopy["config"]["Video"]["Size"][0] as String).get_slice("x", 1))))
+		TYPE_STRING:
+			SettingCopy["config"][tab][item] = value
+		TYPE_INT:
+			SettingCopy["config"][tab][item] = (value as HSlider).value
+			if tab == "Audio":
+				(Global.USENODE("AudioManager") as AudioManager).set_vol(item, (value as HSlider).value)
+		TYPE_FLOAT:
+			SettingCopy["config"][tab][item] = (value as HSlider).value
+			if tab == "Audio":
+				(Global.USENODE("AudioManager") as AudioManager).set_vol(item, (value as HSlider).value)

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Enlightment"
+config/name="Enlightenment"
 run/main_scene="res://AutoLoad/AutoLoad.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/image="res://sources/GUI/logobar.png"
@@ -49,7 +49,7 @@ ui_menu={
 }
 ui_debug={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194343,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194342,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 ui_map={

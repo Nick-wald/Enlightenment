@@ -10,11 +10,15 @@ var Health:int = 0
 var ARM:int = 0
 # 魔法护甲Magic Resistance
 var MR:int = 0
+# tag池
+var tag:Dictionary = {}
+# 阵营
+var Team:Array = []
 
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 # 2D模型获取
@@ -23,3 +27,16 @@ func model2D():
 # 3D模型获取
 func model3D():
 	pass
+
+# tag添加
+func tagAdd(section:String, key:String):
+	if not tag.has(section):
+		tag[section] = Array()
+		(tag[section] as Array).append(key)
+	elif not (tag[section] as Array).has(key):
+		(tag[section] as Array).append(key)
+
+# tag移除
+func tagRemove(section:String, key:String):
+	if tag.has(section):
+		(tag[section] as Array).erase(key)

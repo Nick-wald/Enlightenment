@@ -1,7 +1,7 @@
 extends Control
 class_name GUIModel
 
-func _GUI_init():
+func _GUI_init() -> void:
 	# 绑定
 	if not get_children().is_empty():
 		var NodeList:Array = get_children()

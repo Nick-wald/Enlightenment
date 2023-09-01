@@ -71,7 +71,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 theme = ExtResource("1_a3nxk")
 script = ExtResource("1_w4olc")
 
@@ -111,7 +110,25 @@ autowrap_mode = 0
 
 [node name="LeftMessageContainer" type="VBoxContainer" parent="MarginContainer/TipContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 theme_override_constants/separation = 10
+
+[node name="DEBUG" type="VBoxContainer" parent="MarginContainer/TipContainer/LeftMessageContainer"]
+layout_mode = 2
+
+[node name="StaticMemoryUsage" type="Label" parent="MarginContainer/TipContainer/LeftMessageContainer/DEBUG"]
+layout_mode = 2
+mouse_filter = 0
+text = "静态内存：0MB"
+
+[node name="RenderMemoryUsage" type="Label" parent="MarginContainer/TipContainer/LeftMessageContainer/DEBUG"]
+layout_mode = 2
+text = "显存使用：0MB"
+
+[node name="FPS" type="Label" parent="MarginContainer/TipContainer/LeftMessageContainer/DEBUG"]
+layout_mode = 2
+text = "帧率：0"
 
 [node name="MessageContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2

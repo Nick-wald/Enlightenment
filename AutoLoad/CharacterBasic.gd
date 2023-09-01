@@ -37,8 +37,6 @@ var Ability:Dictionary = {
 	"Wisdom": 1, # 感知
 	"Charisma": 1 # 魅力
 }
-# 阵营
-var Alignment
 
 func _ready():
 	pass

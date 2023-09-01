@@ -8,9 +8,9 @@ var sprites:Dictionary = {
 }
 
 func _ready():
-	pass
+	tagAdd("System", "Character")
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 ### 人物贴图处理

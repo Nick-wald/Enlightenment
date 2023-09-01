@@ -18,7 +18,10 @@ var ScenesList:Dictionary
 # 系统列表
 var SystemsList:Dictionary
 # DEBUG
-var DEBUG:bool = false
+var DEBUG:bool = false:
+	set(value):
+		DEBUG = value
+		(Global.USENODE("TOP") as TOP).switchDEBUGmsg()
 
 func _ready():
 	# 初始化
@@ -39,8 +42,9 @@ func _ready():
 		if (ScenesList["Beginning"] as String) == (item.name as String):
 			(InitList[ScenesPath] as Array).push_back((item as Dictionary))
 	(Global.USENODE(ScenesList["Transition"]) as Transition).TRANSITION(InitList, ScenesList["Beginning"], true)
-	
+
 func _process(_delta):
+	# DEBUG
 	if Input.is_action_just_pressed("ui_debug"):
 		DEBUG = !DEBUG
 		if DEBUG:
@@ -175,6 +179,8 @@ func INITSETTING(settingFlag:String = "all") -> void:
 
 # 初始化
 func START() -> void:
+	## 系统级初始化
+	OS.set_thread_name("Enlightenment")
 	# 注册AutoLoad实例ID
 	Global.InstIDList["AutoLoad"] = get_instance_id()
 	# 加载配置

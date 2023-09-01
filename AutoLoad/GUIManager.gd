@@ -22,7 +22,7 @@ var lang:String = OS.get_locale_language()
 # GUI对象池
 var GUIHandlers:Array = []
 func _ready():
-	changeShowmode()
+	changeShowmode(Global.Setting["config"]["Video"]["Showmode"][0], Rect2i(0, 0, int((Global.Setting["config"]["Video"]["Size"][0] as String).get_slice("x", 0)), int((Global.Setting["config"]["Video"]["Size"][0] as String).get_slice("x", 1))))
 
 func _process(_delta):
 	pass
@@ -32,7 +32,7 @@ func ChattingBoxCreator():
 	pass
 
 # 更改显示模式
-func changeShowmode(mode:String = "", size:Rect2i = Rect2i(Vector2i(0, 0), windowSize), title:String = "Enlightenment"):
+func changeShowmode(mode:String = "null", size:Rect2i = Rect2i(Vector2i(0, 0), windowSize), title:String = "Enlightenment"):
 	showmode = Global.Setting["config"]["Video"]["Showmode"][0]
 	if mode.is_empty():
 		mode = showmode
@@ -46,6 +46,10 @@ func changeShowmode(mode:String = "", size:Rect2i = Rect2i(Vector2i(0, 0), windo
 		"window":
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			showmode = mode
+		"null":
+			pass
+		"":
+			pass
 		_:
 			(Global.USENODE("TOP") as TOP).CONSOLEWARN("Unexpected showmode string: " + mode, "GUIManager.changeShowmode()")
 	if not size == Rect2i():

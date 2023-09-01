@@ -69,3 +69,7 @@
     - 增加：BGM播放系统
   - `EntityModel`:
     - 增加： `model2D` 和 `model3D` 虚函数
+  - `GUIModel > Setting`:
+    - 设置界面完善（持久化保存+预览）
+  - `GUIManager`:
+    - `changeShowMode()`更新，优化了处理逻辑
