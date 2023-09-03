@@ -3,16 +3,16 @@ class_name TOP
 
 ### 常量
 ## 提示控件
-@onready var Tip:RichTextLabel = $MarginContainer/TipContainer/Tip
+@onready var Tip:RichTextLabel = $MarginContainer/HBoxContainer/Left/TipContainer/Tip
 # 右下消息栏
-@onready var MessageContainer:VBoxContainer = $MarginContainer/MessageContainer
+@onready var MessageContainer:VBoxContainer = $MarginContainer/HBoxContainer/Right/MessageContainer
 # 左上消息栏
-@onready var LeftMessageContainer:VBoxContainer = $MarginContainer/TipContainer/LeftMessageContainer
+@onready var LeftMessageContainer:VBoxContainer = $MarginContainer/HBoxContainer/Left/TipContainer/LeftMessageContainer
 # 调试信息
-@onready var DEBUG:VBoxContainer = $MarginContainer/TipContainer/LeftMessageContainer/DEBUG
-@onready var StaticMemoryUsage:Label = $MarginContainer/TipContainer/LeftMessageContainer/DEBUG/StaticMemoryUsage
-@onready var RenderMemoryUsage:Label = $MarginContainer/TipContainer/LeftMessageContainer/DEBUG/RenderMemoryUsage
-@onready var FPS:Label = $MarginContainer/TipContainer/LeftMessageContainer/DEBUG/FPS
+@onready var DEBUG:VBoxContainer = LeftMessageContainer.get_node("DEBUG")
+@onready var StaticMemoryUsage:Label = LeftMessageContainer.get_node("DEBUG/StaticMemoryUsage")
+@onready var RenderMemoryUsage:Label = LeftMessageContainer.get_node("DEBUG/RenderMemoryUsage")
+@onready var FPS:Label = LeftMessageContainer.get_node("DEBUG/FPS")
 # 屏幕遮罩控件
 @onready var RectMask:ColorRect = $RectMask
 # 动画播放器控件
@@ -35,7 +35,7 @@ func _process(_delta):
 	if DEBUG.visible:
 		StaticMemoryUsage.text = "内存使用（cur/max）: %.3f %s / %.3f %s" % [Performance.get_monitor(Performance.MEMORY_STATIC) / float(staticmemoryusage), staticmemoryusagesuffix, Performance.get_monitor(Performance.MEMORY_STATIC_MAX) / float(staticmemoryusage) , staticmemoryusagesuffix]
 		RenderMemoryUsage.text = "显存使用: %.3f %s" % [Performance.get_monitor(Performance.RENDER_VIDEO_MEM_USED) / float(staticmemoryusage), staticmemoryusagesuffix]
-		FPS.text = "FPS: %d" % [Performance.get_monitor(Performance.TIME_FPS)]
+		FPS.text = "FPS（cur/max）: %d / %d" % [Performance.get_monitor(Performance.TIME_FPS), Engine.max_fps]
 
 # 消息栏警告信息
 func CONSOLEWARN(text:String, username:String = "") -> void:

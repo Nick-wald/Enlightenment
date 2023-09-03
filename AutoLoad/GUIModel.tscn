@@ -1,14 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://dxl5pjij0odc4"]
+[gd_scene load_steps=12 format=3 uid="uid://dxl5pjij0odc4"]
 
 [ext_resource type="Script" path="res://AutoLoad/GUIModel.gd" id="1_531oo"]
 [ext_resource type="Theme" uid="uid://cnw25cdhcyxjc" path="res://sources/Default.tres" id="1_ni6fh"]
 [ext_resource type="FontFile" uid="uid://dt8k30c14r87d" path="res://sources/fonts/VonwaonBitmap-16px.ttf" id="3_tmg8p"]
 [ext_resource type="Script" path="res://AutoLoad/Setting.gd" id="3_vathi"]
+[ext_resource type="Texture2D" uid="uid://ekjjm42h00o8" path="res://sources/GUI/Dialog/DialogBasic.png" id="5_3e0yh"]
 [ext_resource type="Script" path="res://AutoLoad/DLC.gd" id="5_3ioap"]
 [ext_resource type="Texture2D" uid="uid://r2qm0awehrmv" path="res://icon.svg" id="6_ob4n7"]
 [ext_resource type="Script" path="res://AutoLoad/BarBasic.gd" id="8_kujw8"]
 [ext_resource type="Script" path="res://AutoLoad/ChapterTitle.gd" id="9_ogaqm"]
-[ext_resource type="Texture2D" uid="uid://bx27ke8pwhuh0" path="res://sources/GUI/ChattingBox/paper/1.png" id="50_i7fh5"]
+[ext_resource type="Script" path="res://AutoLoad/DialogBasic.gd" id="10_07lfq"]
 
 [sub_resource type="Theme" id="Theme_u1st0"]
 default_font = ExtResource("3_tmg8p")
@@ -60,10 +61,14 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
-[node name="TextureRect" type="TextureRect" parent="Setting/SettingBox"]
+[node name="TextureRect" type="NinePatchRect" parent="Setting/SettingBox"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("50_i7fh5")
+texture = ExtResource("5_3e0yh")
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
 
 [node name="MarginContainer" type="MarginContainer" parent="Setting/SettingBox/TextureRect"]
 layout_mode = 1
@@ -134,7 +139,6 @@ text = "应用"
 metadata/ButtomType = "apply"
 
 [node name="DLC" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -165,10 +169,15 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
-[node name="TextureRect" type="TextureRect" parent="DLC/DLCBox"]
+[node name="TextureRect" type="NinePatchRect" parent="DLC/DLCBox"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("50_i7fh5")
+texture = ExtResource("5_3e0yh")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 26
+patch_margin_bottom = 25
 
 [node name="MarginContainer" type="MarginContainer" parent="DLC/DLCBox/TextureRect"]
 layout_mode = 1
@@ -267,6 +276,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("9_ogaqm")
 
+[node name="Dialog" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogBasic" type="Control" parent="Dialog"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_07lfq")
+
 [connection signal="pressed" from="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer/Buttoms/Cancel" to="Setting" method="_on_cancel_pressed"]
 [connection signal="pressed" from="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer/Buttoms/Apply" to="Setting" method="_on_apply_pressed"]
 [connection signal="pressed" from="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/Buttoms/Cancel" to="DLC" method="_on_cancel_pressed"]
+[connection signal="pressed" from="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/Buttoms/Apply" to="DLC" method="_on_apply_pressed"]

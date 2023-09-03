@@ -98,16 +98,15 @@ func updateConfigArea(tab:String) -> void:
 
 # 更新设置&预览
 func updateSetting(tab:String, item:String, value) -> void:
-	(Global.USENODE("TOP") as TOP).CONSOLE(str(tab) + " " + str(item) + " " + str(value))
+	if (Global.AutoLoad as AutoLoad).DEBUG:
+		(Global.USENODE("TOP") as TOP).CONSOLE(str(tab) + " " + str(item) + " " + str(value))
 	match typeof(SettingCopy["config"][tab][item]):
 		TYPE_BOOL:
 			SettingCopy["config"][tab][item] = value
 		TYPE_ARRAY:
 			SettingCopy["config"][tab][item][0] = (value as OptionButton).get_item_text((value as OptionButton).selected)
-			if tab == "Video" and item == "Showmode":
-				(Global.USENODE("GUIManager") as GUIManager).changeShowmode(SettingCopy["config"][tab][item][0])
-			if tab == "Video" and item == "Size":
-				(Global.USENODE("GUIManager") as GUIManager).changeShowmode("null", Rect2i(0, 0, int((SettingCopy["config"]["Video"]["Size"][0] as String).get_slice("x", 0)), int((SettingCopy["config"]["Video"]["Size"][0] as String).get_slice("x", 1))))
+			if (tab == "Video" and item == "Showmode") or (tab == "Video" and item == "Size"):
+				(Global.USENODE("GUIManager") as GUIManager).changeShowmode(SettingCopy["config"]["Video"]["Showmode"][0], Rect2i(0, 0, int((SettingCopy["config"]["Video"]["Size"][0] as String).get_slice("x", 0)), int((SettingCopy["config"]["Video"]["Size"][0] as String).get_slice("x", 1))))
 		TYPE_STRING:
 			SettingCopy["config"][tab][item] = value
 		TYPE_INT:

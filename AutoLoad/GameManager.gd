@@ -4,12 +4,27 @@ class_name GameManager
 ### 常量
 # 主相机
 @onready var Camera:Camera2D = $Node2D/SceneCamera
+### 变量
+# 游戏模式
+enum GAMEMODE {Story, Balance, Strategy}
+var gamemode:GAMEMODE = GAMEMODE.Balance
+# 包池
+var PackPool:Dictionary = {}
 
 func _ready():
+	# 载入游戏本体
 	pass
 
-func _process(delta):
+func _process(_delta):
 	pass
+
+# 包挂载器
+func PackRegister():
+	pass
+
+# 更改游戏模式
+func setGameMode(mode:GAMEMODE = GAMEMODE.Balance):
+	gamemode = mode
 
 # 投掷骰子
 func Dice(ndn:String = "1d20"):

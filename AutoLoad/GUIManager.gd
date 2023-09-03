@@ -16,20 +16,27 @@ var showmode:String = Global.Setting["config"]["Video"]["Showmode"][0]
 # 窗口大小
 var windowSize:Vector2i = DisplayServer.screen_get_size()
 # 窗口刷新率
-var windowReflashRate:float = DisplayServer.screen_get_refresh_rate()
+var windowReflashRate:int = 60
 # 语言
 var lang:String = OS.get_locale_language()
 # GUI对象池
 var GUIHandlers:Array = []
 func _ready():
+	windowReflashRate = int(DisplayServer.screen_get_refresh_rate())
+	if windowReflashRate < 0:
+		windowReflashRate = 60
+	Engine.max_fps = windowReflashRate
 	changeShowmode(Global.Setting["config"]["Video"]["Showmode"][0], Rect2i(0, 0, int((Global.Setting["config"]["Video"]["Size"][0] as String).get_slice("x", 0)), int((Global.Setting["config"]["Video"]["Size"][0] as String).get_slice("x", 1))))
 
 func _process(_delta):
 	pass
 
-# 创建计时对话入口
-func ChattingBoxCreator():
-	pass
+# 对话框构建器
+func DialogBoxCreator(type:String, arg:Array):
+	if has_node("./GUIModel/Dialog/" + type):
+		GUIModelBuilder("/Dialog/" + type, arg)
+	else:
+		(Global.USENODE("TOP") as TOP).CONSOLEWARN("Unfound DialogBox " + type, "GUIManager.DialogBoxCreator()")
 
 # 更改显示模式
 func changeShowmode(mode:String = "null", size:Rect2i = Rect2i(Vector2i(0, 0), windowSize), title:String = "Enlightenment"):
@@ -53,9 +60,13 @@ func changeShowmode(mode:String = "null", size:Rect2i = Rect2i(Vector2i(0, 0), w
 		_:
 			(Global.USENODE("TOP") as TOP).CONSOLEWARN("Unexpected showmode string: " + mode, "GUIManager.changeShowmode()")
 	if not size == Rect2i():
+		ProjectSettings.set_setting("display/window/size/viewport_width", size.size.x)
+		ProjectSettings.set_setting("display/window/size/viewport_height", size.size.y)
 		DisplayServer.window_set_size(size.size)
 	if not title == "null":
 		DisplayServer.window_set_title(title)
+	DisplayServer.window_set_position(DisplayServer.get_display_safe_area().size/2)
+	DisplayServer.window_request_attention()
 
 # 设置鼠标样式
 func setCursor(mode:String = "null", custom_img_path:String = "null"):

@@ -10,7 +10,7 @@ const SystemsPath:String = "res://AutoLoad/"
 const UserDataPath:String = "user://"
 # 鼠标精灵表
 const CursorList:Dictionary = {
-	"default": "res://sources/GUI/cursor_default.png"
+	"default": "res://sources/GUI/cursor/cursor_default.png"
 }
 ### 全局变量
 # 场景列表

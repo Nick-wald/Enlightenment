@@ -97,41 +97,69 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="TipContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+
+[node name="Left" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TipContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Left"]
+layout_mode = 2
+offset_right = 1820.0
+offset_bottom = 1010.0
 mouse_filter = 2
 theme_override_constants/separation = 10
 
-[node name="Tip" type="RichTextLabel" parent="MarginContainer/TipContainer"]
+[node name="Tip" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Left/TipContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 bbcode_enabled = true
 fit_content = true
 autowrap_mode = 0
 
-[node name="LeftMessageContainer" type="VBoxContainer" parent="MarginContainer/TipContainer"]
+[node name="LeftMessageContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Left/TipContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_constants/separation = 10
 
-[node name="DEBUG" type="VBoxContainer" parent="MarginContainer/TipContainer/LeftMessageContainer"]
+[node name="DEBUG" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Left/TipContainer/LeftMessageContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="StaticMemoryUsage" type="Label" parent="MarginContainer/TipContainer/LeftMessageContainer/DEBUG"]
+[node name="StaticMemoryUsage" type="Label" parent="MarginContainer/HBoxContainer/Left/TipContainer/LeftMessageContainer/DEBUG"]
 layout_mode = 2
 mouse_filter = 0
 text = "静态内存：0MB"
 
-[node name="RenderMemoryUsage" type="Label" parent="MarginContainer/TipContainer/LeftMessageContainer/DEBUG"]
+[node name="RenderMemoryUsage" type="Label" parent="MarginContainer/HBoxContainer/Left/TipContainer/LeftMessageContainer/DEBUG"]
 layout_mode = 2
 text = "显存使用：0MB"
 
-[node name="FPS" type="Label" parent="MarginContainer/TipContainer/LeftMessageContainer/DEBUG"]
+[node name="FPS" type="Label" parent="MarginContainer/HBoxContainer/Left/TipContainer/LeftMessageContainer/DEBUG"]
 layout_mode = 2
 text = "帧率：0"
 
-[node name="MessageContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Middle" type="Control" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Right" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MessageContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Right"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
 mouse_filter = 2

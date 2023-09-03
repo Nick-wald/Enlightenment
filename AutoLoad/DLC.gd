@@ -1,15 +1,15 @@
 extends GUIModel
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
 
-
+# 取消
 func _on_cancel_pressed():
+	queue_free()
+
+# 确认
+func _on_apply_pressed():
 	queue_free()

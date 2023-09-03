@@ -73,3 +73,24 @@
     - 设置界面完善（持久化保存+预览）
   - `GUIManager`:
     - `changeShowMode()`更新，优化了处理逻辑
+
+## 2023.9.3
+
+> 代为神罚，惊天动地。
+> 
+> ——《萨布西斯特族传说集》霍特布·瓦，西尔莱夫国家出版社，西历0年出版
+
+- Framework
+  - `Beginning`:
+    - 增加：`开始游戏`的进入/退出动画
+    - 增加：游戏模式：`Story/Balance/Strategy`
+  - `GameManager`:
+    - 增加：`setGameMode()`游戏模式调整函数
+  - `GUI`:
+    - 更新了`背景框`样式
+  - `EntityModel`:
+    - 增加：人物生成器精灵资源【仅仅是美术资源，待代码实现】（基于[LPC Character generator](https://github.com/Gaurav0/Universal-LPC-Spritesheet-Character-Generator)实现）
+  - `TOP`:
+    - 完善：`F11`显示调试信息
+  - `GUIManager`:
+    - 添加：`max_fps`设定功能

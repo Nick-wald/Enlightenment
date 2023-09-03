@@ -39,7 +39,7 @@ var Ability:Dictionary = {
 }
 
 func _ready():
-	pass
+	super()
 
 func _process(delta):
 	pass
