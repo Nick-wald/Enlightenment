@@ -11,7 +11,7 @@ var equipments:Dictionary = {}
 
 func _ready():
 	super()
-	tagAdd("Character")
+	tagAdd(["Character"])
 
 func _process(_delta):
 	pass

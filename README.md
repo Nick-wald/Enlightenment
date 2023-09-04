@@ -23,7 +23,9 @@
 - `scenes` 》 游戏场景
 - `sources` 》 资源文件
   - `audio` 》 音频（BGM/UI/……）
-  - `Character` 》 人物贴图
+  - `Character` 》 角色贴图
+	- `sheet_definitions` 》 角色精灵资源定义
+	- `spritesheets` 》 角色精灵表
   - `fonts` 》 字体
   - `GUI` 》 图像用户界面贴图
   - `shader` 》 着色器
@@ -66,13 +68,13 @@
 
 - Framework
   - `AudioManager`:
-    - 增加：BGM播放系统
+	- 增加：BGM播放系统
   - `EntityModel`:
-    - 增加： `model2D` 和 `model3D` 虚函数
+	- 增加： `model2D` 和 `model3D` 虚函数
   - `GUIModel > Setting`:
-    - 设置界面完善（持久化保存+预览）
+	- 设置界面完善（持久化保存+预览）
   - `GUIManager`:
-    - `changeShowMode()`更新，优化了处理逻辑
+	- `changeShowMode()`更新，优化了处理逻辑
 
 ## 2023.9.3
 
@@ -82,15 +84,33 @@
 
 - Framework
   - `Beginning`:
-    - 增加：`开始游戏`的进入/退出动画
-    - 增加：游戏模式：`Story/Balance/Strategy`
+	- 增加：`开始游戏`的进入/退出动画
+	- 增加：游戏模式：`Story/Balance/Strategy`
   - `GameManager`:
-    - 增加：`setGameMode()`游戏模式调整函数
+	- 增加：`setGameMode()`游戏模式调整函数
   - `GUI`:
-    - 更新了`背景框`样式
+	- 更新了`背景框`样式
   - `EntityModel`:
-    - 增加：人物生成器精灵资源【仅仅是美术资源，待代码实现】（基于[LPC Character generator](https://github.com/Gaurav0/Universal-LPC-Spritesheet-Character-Generator)实现）
+	- 增加：人物生成器精灵资源【仅仅是美术资源，待代码实现】（基于[LPC Character generator](https://github.com/Gaurav0/Universal-LPC-Spritesheet-Character-Generator)实现）
   - `TOP`:
-    - 完善：`F11`显示调试信息
+	- 完善：`F11`显示调试信息
   - `GUIManager`:
-    - 添加：`max_fps`设定功能
+	- 添加：`max_fps`设定功能
+
+## 2023.9.4
+
+> 暗夜无声，大象无形。
+> 
+>——《沙杜奥斯族纪实》霍特布·瓦，西尔莱夫国家出版社，西历0年出版
+
+- Framework
+  - `AutoLoad`:
+    - 增加：`WRITEJSON()`
+    - 修复：`WRITEFILE()`写入不存在的文件时发生错误
+  - `GamemManager`:
+    - 增加：`Package`管理功能，通过包组织和拓展游戏内容
+  - `AudioManager`:
+    - 增加：`SFX`播放功能
+    - 增加：一些音效
+  - `GUIModel`:
+    - 修改：UI音效的绑定

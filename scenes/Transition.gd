@@ -202,7 +202,7 @@ func LOAD() -> void:
 					NODELOAD(item.path, item.name, get_node("/root/AutoLoad"), item.layer)
 				else:
 					NODELOAD(item.path, item.name, get_node("/root/AutoLoad"), item.layer, item.child)
-			else:
+			elif (Global.AutoLoad as AutoLoad).DEBUG:
 				Global.USENODE("TOP").CONSOLEWARN(item.name + " already existed in InstIDList.", "Transition.LOAD()")
 		else:
 			gotoScenePath = item.path

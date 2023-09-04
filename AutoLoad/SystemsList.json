@@ -1,6 +1,10 @@
 {
 	"Basic": "AutoLoad",
 	"Start":[
+		"TOP",
+		"GUIManager",
+		"AudioManager",
+		"GameManager"
 	],
 	"version": "1.0.0",
 	"systems": [

@@ -14,6 +14,11 @@ func _GUI_init() -> void:
 							(Global.USENODE("AudioManager") as AudioManager).bindUISound((child as BaseButton).pressed, "ButtomCancel")
 						"apply":
 							(Global.USENODE("AudioManager") as AudioManager).bindUISound((child as BaseButton).pressed, "ButtomApply")
+						"select":
+							(Global.USENODE("AudioManager") as AudioManager).bindUISound((child as BaseButton).mouse_entered, "ButtomOK")
+							(Global.USENODE("AudioManager") as AudioManager).bindUISound((child as BaseButton).pressed, "ButtomSelect")
+						"page":
+							(Global.USENODE("AudioManager") as AudioManager).bindSFXSound((child as BaseButton).pressed, "Paper")
 						_:
 							(Global.USENODE("AudioManager") as AudioManager).bindUISound((child as BaseButton).pressed, "ButtomClick")
 				else:

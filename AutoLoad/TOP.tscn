@@ -143,6 +143,10 @@ text = "显存使用：0MB"
 layout_mode = 2
 text = "帧率：0"
 
+[node name="RenderObject" type="Label" parent="MarginContainer/HBoxContainer/Left/TipContainer/LeftMessageContainer/DEBUG"]
+layout_mode = 2
+text = "渲染对象数：0"
+
 [node name="Middle" type="Control" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3

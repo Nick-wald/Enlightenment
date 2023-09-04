@@ -41,7 +41,7 @@ func _ready():
 	for item in (ScenesList["scenes"] as Array):
 		if (ScenesList["Beginning"] as String) == (item.name as String):
 			(InitList[ScenesPath] as Array).push_back((item as Dictionary))
-	(Global.USENODE(ScenesList["Transition"]) as Transition).TRANSITION(InitList, ScenesList["Beginning"], true)
+	(Global.USENODE(ScenesList["Transition"]) as Transition).TRANSITION(InitList, ScenesList["Beginning"], false)
 
 func _process(_delta):
 	# DEBUG
@@ -60,6 +60,7 @@ func _exit_tree():
 
 # 退出游戏
 func QUITGAME() ->void:
+	(Global.USENODE("GameManager") as GameManager).saveEnablePack()
 	print_tree_pretty()
 	get_tree().quit()
 
@@ -111,8 +112,12 @@ func WRITEINI(path: String = Global.AutoLoad.UserDataPath + "config.ini") -> voi
 
 # 写入文件
 func WRITEFILE(path:String, content:String) -> void:
-	var file:FileAccess = FileAccess.open(path, FileAccess.READ_WRITE)
+	var file:FileAccess = FileAccess.open(path, FileAccess.WRITE)
 	file.store_string(content)
+
+# 写入JSON
+func WRITEJSON(path:String, content:Dictionary) -> void:
+	WRITEFILE(path, JSON.stringify(content, "\t"))
 
 # 节点导入
 func NODELOAD(path:String, nodename:String, node:Node = get_node("/root/AutoLoad"), layer = 0, childlist:Array = []) -> void:
@@ -181,6 +186,7 @@ func INITSETTING(settingFlag:String = "all") -> void:
 func START() -> void:
 	## 系统级初始化
 	OS.set_thread_name("Enlightenment")
+	DisplayServer.window_set_title("Enlightenment")
 	# 注册AutoLoad实例ID
 	Global.InstIDList["AutoLoad"] = get_instance_id()
 	# 加载配置
@@ -189,8 +195,6 @@ func START() -> void:
 	SystemsList = READJSON(SystemsPath + "SystemsList.json")
 	Global.Setting = READJSON(SystemsPath + "config.json")
 	READINI()
-	
-	Global.USENODE("EnvManager")
 	
 	# 设置鼠标
 	(Global.USENODE("GUIManager") as GUIManager).setCursor("default", CursorList["default"])

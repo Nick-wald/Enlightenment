@@ -8,19 +8,65 @@ class_name GameManager
 # 游戏模式
 enum GAMEMODE {Story, Balance, Strategy}
 var gamemode:GAMEMODE = GAMEMODE.Balance
+# 包路径
+var PackagePath:Array[String] = ["res://Package/", "user://Package/"]
 # 包池
 var PackPool:Dictionary = {}
+var LoadedPackage:Array[String] = []
+var enablePack:Dictionary = {}
 
 func _ready():
-	# 载入游戏本体
-	pass
+	# 载入包
+	PackageScanner()
+	if FileAccess.file_exists(Global.AutoLoad.UserDataPath + "package.json"):
+		enablePack = (Global.AutoLoad as AutoLoad).READJSON(Global.AutoLoad.UserDataPath + "package.json")
+		var registerItem:Array[String] = []
+		for item in enablePack.keys():
+			if enablePack[item]:
+				registerItem.append(item)
+		PackRegister(registerItem)
 
 func _process(_delta):
 	pass
 
+# 保存包的启动列表
+func saveEnablePack():
+	(Global.AutoLoad as AutoLoad).WRITEJSON(Global.AutoLoad.UserDataPath + "package.json", enablePack)
+
+# 包扫描器
+func PackageScanner():
+	var registerItem:Array[String] = []
+	for item in PackagePath:
+		var PackageDir:DirAccess = DirAccess.open(item)
+		if PackageDir:
+			print(PackageDir.get_directories())
+			for pack in PackageDir.get_directories():
+				var PackDir:DirAccess = DirAccess.open(item + pack)
+				if PackDir.file_exists("PackageConfig.json"):
+					var PackCig:Dictionary = (Global.AutoLoad as AutoLoad).READJSON(item + pack + "/PackageConfig.json")
+					if PackCig.has("name") and PackCig.has("version") and PackCig.has("type") and PackDir.dir_exists("source"):
+						PackPool[pack] = PackCig
+						if PackCig["type"] == "main":
+							registerItem.append(pack)
+					else:
+						(Global.USENODE("TOP") as TOP).CONSOLEERROR("Unreconigized package: " + pack + " in " + item, "GameManager.PackageScanner()")
+	PackRegister(registerItem)
+
 # 包挂载器
-func PackRegister():
-	pass
+func PackRegister(PackageName:Array[String]):
+	if PackPool.has_all(PackageName):
+		for item in PackageName:
+			match PackPool[item]["type"]:
+				"main":
+					enablePack[item] = true
+					if not LoadedPackage.has(item):
+						LoadedPackage.append(item)
+	else:
+		for item in PackageName:
+			if not PackPool.has(item):
+				enablePack[item] = false
+				(Global.USENODE("TOP") as TOP).CONSOLEERROR("Unknown package: " + item, "GameManager.PackRegister()")
+			
 
 # 更改游戏模式
 func setGameMode(mode:GAMEMODE = GAMEMODE.Balance):

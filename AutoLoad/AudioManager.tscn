@@ -9,6 +9,8 @@ script = ExtResource("1_ivpps")
 
 [node name="SFX_GROUP" type="Node" parent="."]
 
+[node name="SFX_Player" type="AudioStreamPlayer" parent="SFX_GROUP"]
+
 [node name="BGM_GROUP" type="Node" parent="."]
 
 [node name="BGM_Player" type="AudioStreamPlayer" parent="BGM_GROUP"]

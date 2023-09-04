@@ -23,6 +23,16 @@
 	"UI": {
 		"ButtomClick": "/UI/ButtomClick.wav",
 		"ButtomCancel": "/UI/ButtomCancel.wav",
-		"ButtomApply": "/UI/ButtomApply.wav"
+		"ButtomApply": "/UI/ButtomApply.wav",
+		"ButtomNO": "/UI/ButtomNO.wav",
+		"ButtomOK": "/UI/ButtomOK.wav",
+		"ButtomSelect": "/UI/ButtomSelect.wav"
+	},
+	"SFX": {
+		"ClothPull": ["/SFX/ClothPull", 1, 10, "mp3"],
+		"ClothDrop": ["/SFX/ClothDrop", 1, 10, "mp3"],
+		"Lock": "/SFX/Lock.mp3",
+		"Paper": ["/SFX/Paper", 1, 1, "mp3"],
+		"Ring": "/SFX/Ring.mp3"
 	}
 }

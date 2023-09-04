@@ -13,6 +13,7 @@ class_name TOP
 @onready var StaticMemoryUsage:Label = LeftMessageContainer.get_node("DEBUG/StaticMemoryUsage")
 @onready var RenderMemoryUsage:Label = LeftMessageContainer.get_node("DEBUG/RenderMemoryUsage")
 @onready var FPS:Label = LeftMessageContainer.get_node("DEBUG/FPS")
+@onready var RenderObject:Label = LeftMessageContainer.get_node("DEBUG/RenderObject")
 # 屏幕遮罩控件
 @onready var RectMask:ColorRect = $RectMask
 # 动画播放器控件
@@ -36,14 +37,15 @@ func _process(_delta):
 		StaticMemoryUsage.text = "内存使用（cur/max）: %.3f %s / %.3f %s" % [Performance.get_monitor(Performance.MEMORY_STATIC) / float(staticmemoryusage), staticmemoryusagesuffix, Performance.get_monitor(Performance.MEMORY_STATIC_MAX) / float(staticmemoryusage) , staticmemoryusagesuffix]
 		RenderMemoryUsage.text = "显存使用: %.3f %s" % [Performance.get_monitor(Performance.RENDER_VIDEO_MEM_USED) / float(staticmemoryusage), staticmemoryusagesuffix]
 		FPS.text = "FPS（cur/max）: %d / %d" % [Performance.get_monitor(Performance.TIME_FPS), Engine.max_fps]
+		RenderObject.text = "%d 个对象, %d / %d 个节点(tol/orp), %d 个资源" % [Performance.get_monitor(Performance.OBJECT_COUNT), Performance.get_monitor(Performance.OBJECT_NODE_COUNT), Performance.get_monitor(Performance.OBJECT_ORPHAN_NODE_COUNT), Performance.get_monitor(Performance.OBJECT_RESOURCE_COUNT)]
 
 # 消息栏警告信息
 func CONSOLEWARN(text:String, username:String = "") -> void:
-	CONSOLE("[color=yellow]" + text + "[/color]", "[color=yellow][Warning][/color] " + username)
+	CONSOLE("[color=#FAFAD2]" + text + "[/color]", "[color=yellow][Warning][/color] " + username)
 
 # 消息栏错误信息
 func CONSOLEERROR(text:String, username:String = "") -> void:
-	CONSOLE("[color=red]" + text + "[/color]", "[color=red][Error][/color] " + username)
+	CONSOLE("[color=#FA8072]" + text + "[/color]", "[color=red][Error][/color] " + username)
 
 # 消息栏信息
 func CONSOLE(text:String, username = null) -> void:

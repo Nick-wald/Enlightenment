@@ -21,6 +21,7 @@ func _GUI_init():
 		var SettingTab:Button = Button.new()
 		SettingTab.set_text(tab)
 		SettingTab.set_meta("ConfigTab", tab)
+		SettingTab.set_meta("ButtomType", "page")
 		SettingTab.pressed.connect(updateConfigArea.bind(tab))
 		ConfigTab.add_child(SettingTab)
 	updateConfigArea(ConfigTab.get_child(0).get_meta("ConfigTab"))

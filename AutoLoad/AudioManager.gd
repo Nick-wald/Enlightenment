@@ -5,6 +5,7 @@ class_name AudioManager
 # 播放器控件
 @onready var UIPlayer:AudioStreamPlayer = $UI_GROUP/UI_Player
 @onready var BGMPlayer:AudioStreamPlayer = $BGM_GROUP/BGM_Player
+@onready var SFXPlayer:AudioStreamPlayer = $SFX_GROUP/SFX_Player
 # 音频文件路径
 const AudioPath:String = "res://sources/audio/"
 # 操作标识符
@@ -39,6 +40,10 @@ func _ready():
 func _process(_delta):
 	pass
 
+# player挂载器
+func playerRegister():
+	pass
+
 # 设置音量
 func set_vol(MusicManagerflag:String, vol:float = 0.5) -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(MusicManagerflag), linear_to_db(clamp(vol, 0, 1)))
@@ -62,7 +67,22 @@ func UISound(type:String) -> void:
 # UI音效绑定
 func bindUISound(nodeSignal:Signal, type:String) -> void:
 	nodeSignal.connect(UISound.bind(type))
-		
+
+# UI音效绑定
+func bindSFXSound(nodeSignal:Signal, type:String, random:int = -1, player = SFXPlayer) -> void:
+	nodeSignal.connect(SFXSound.bind(type, random, player))
+
+# SFX声音播放
+func SFXSound(type:String, random:int = -1, player = SFXPlayer) -> void:
+	if (AudioList["SFX"] as Dictionary).has(type):
+		if random < 0 and typeof(AudioList["SFX"][type]) == TYPE_ARRAY:
+			randomize()
+			play(player, AudioPath + AudioList["SFX"][type][0] + str( randi_range(int(AudioList["SFX"][type][1]), int(AudioList["SFX"][type][2])) ) + "." + AudioList["SFX"][type][3] )
+		elif typeof(AudioList["SFX"][type]) == TYPE_ARRAY:
+			play(player, AudioPath + AudioList["SFX"][type][0] + str( clampi(random, int(AudioList["SFX"][type][1]), int(AudioList["SFX"][type][2])) ) + "." + AudioList["SFX"][type][3] )
+		else:
+			play(player, AudioPath + AudioList["SFX"][type])
+
 # BGM播放处理
 func BGMtran(scene:String = "null") -> void:
 	if not scene == "null" and (AudioList["BGM"] as Dictionary).has(scene):
