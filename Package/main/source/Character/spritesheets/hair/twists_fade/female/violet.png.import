@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct5kbp7cdksqt"
-path="res://.godot/imported/violet.png-15fb9dae67f7bfe422020fd58d19b974.ctex"
+path="res://.godot/imported/violet.png-9f2ad16483cd98c7093c83869cccc4db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/twists_fade/female/violet.png"
-dest_files=["res://.godot/imported/violet.png-15fb9dae67f7bfe422020fd58d19b974.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/twists_fade/female/violet.png"
+dest_files=["res://.godot/imported/violet.png-9f2ad16483cd98c7093c83869cccc4db.ctex"]
 
 [params]
 

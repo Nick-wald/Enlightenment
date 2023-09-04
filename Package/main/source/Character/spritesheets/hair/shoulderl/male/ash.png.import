@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eikimcxhle2f"
-path="res://.godot/imported/ash.png-cc62e96df45115053e45f419a693eec4.ctex"
+path="res://.godot/imported/ash.png-1963bf4f86118b842078c92670834916.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shoulderl/male/ash.png"
-dest_files=["res://.godot/imported/ash.png-cc62e96df45115053e45f419a693eec4.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shoulderl/male/ash.png"
+dest_files=["res://.godot/imported/ash.png-1963bf4f86118b842078c92670834916.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5v50700oly2m"
-path="res://.godot/imported/gray.png-975579908b39a4665b856939b42056ae.ctex"
+path="res://.godot/imported/gray.png-b95386ea5de0da2d94d76212b6d16188.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shortknot/male/gray.png"
-dest_files=["res://.godot/imported/gray.png-975579908b39a4665b856939b42056ae.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shortknot/male/gray.png"
+dest_files=["res://.godot/imported/gray.png-b95386ea5de0da2d94d76212b6d16188.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4mnyj8gnqvix"
-path="res://.godot/imported/ginger.png-f211c5e21f9cbe6b65c988a8e619b5ba.ctex"
+path="res://.godot/imported/ginger.png-48a3af3ecc2f6e9282c1b4921aea41a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/twists_fade/female/ginger.png"
-dest_files=["res://.godot/imported/ginger.png-f211c5e21f9cbe6b65c988a8e619b5ba.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/twists_fade/female/ginger.png"
+dest_files=["res://.godot/imported/ginger.png-48a3af3ecc2f6e9282c1b4921aea41a1.ctex"]
 
 [params]
 

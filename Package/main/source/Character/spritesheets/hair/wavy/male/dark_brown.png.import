@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cd7ojw18chdv2"
-path="res://.godot/imported/dark_brown.png-7772c8c445f71cef5339e703bcbee6e0.ctex"
+path="res://.godot/imported/dark_brown.png-94b54551229d7fef126a92e6f823516a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/wavy/male/dark_brown.png"
-dest_files=["res://.godot/imported/dark_brown.png-7772c8c445f71cef5339e703bcbee6e0.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/wavy/male/dark_brown.png"
+dest_files=["res://.godot/imported/dark_brown.png-94b54551229d7fef126a92e6f823516a.ctex"]
 
 [params]
 

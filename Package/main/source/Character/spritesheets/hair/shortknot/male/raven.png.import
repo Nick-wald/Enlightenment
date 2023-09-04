@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpsoa3srcok47"
-path="res://.godot/imported/raven.png-7b3a23ec785b9356873bb447294eb6dd.ctex"
+path="res://.godot/imported/raven.png-350547bd38dbe7d939dc2caba3359adf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shortknot/male/raven.png"
-dest_files=["res://.godot/imported/raven.png-7b3a23ec785b9356873bb447294eb6dd.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shortknot/male/raven.png"
+dest_files=["res://.godot/imported/raven.png-350547bd38dbe7d939dc2caba3359adf.ctex"]
 
 [params]
 

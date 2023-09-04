@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h5q4pnqtl0u3"
-path="res://.godot/imported/redhead.png-358a561bb65656e39e78582a18daf263.ctex"
+path="res://.godot/imported/redhead.png-245fa2550375b0e44eb82c07933c19b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shoulderr/female/redhead.png"
-dest_files=["res://.godot/imported/redhead.png-358a561bb65656e39e78582a18daf263.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shoulderr/female/redhead.png"
+dest_files=["res://.godot/imported/redhead.png-245fa2550375b0e44eb82c07933c19b3.ctex"]
 
 [params]
 

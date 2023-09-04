@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy1k3ofsmwvej"
-path="res://.godot/imported/pink.png-376e67189ead114cacd08de1b0652249.ctex"
+path="res://.godot/imported/pink.png-28534b943ec11118afd44c126135a28b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/messy3/male/pink.png"
-dest_files=["res://.godot/imported/pink.png-376e67189ead114cacd08de1b0652249.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/messy3/male/pink.png"
+dest_files=["res://.godot/imported/pink.png-28534b943ec11118afd44c126135a28b.ctex"]
 
 [params]
 

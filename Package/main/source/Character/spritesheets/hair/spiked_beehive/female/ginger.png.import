@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bad6j0yrhkupw"
-path="res://.godot/imported/ginger.png-468542138e13b5027fefb9f96965139e.ctex"
+path="res://.godot/imported/ginger.png-e4e0648a4887fb45c997666ecb6a9e9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_beehive/female/ginger.png"
-dest_files=["res://.godot/imported/ginger.png-468542138e13b5027fefb9f96965139e.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_beehive/female/ginger.png"
+dest_files=["res://.godot/imported/ginger.png-e4e0648a4887fb45c997666ecb6a9e9d.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://defnj3wjmgj2n"
-path="res://.godot/imported/platinum.png-60f1c217e950c3388d2ce7c486ba7716.ctex"
+path="res://.godot/imported/platinum.png-e8690ed6ee10d65440904ef13ab77db3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_beehive/male/platinum.png"
-dest_files=["res://.godot/imported/platinum.png-60f1c217e950c3388d2ce7c486ba7716.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_beehive/male/platinum.png"
+dest_files=["res://.godot/imported/platinum.png-e8690ed6ee10d65440904ef13ab77db3.ctex"]
 
 [params]
 

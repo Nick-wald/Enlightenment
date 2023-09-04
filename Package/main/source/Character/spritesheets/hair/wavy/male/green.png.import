@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bolghcjadq70h"
-path="res://.godot/imported/green.png-1b767e18413d4609be4e4102152e05cd.ctex"
+path="res://.godot/imported/green.png-2b48e8a11adcd8915192fbad99e9e2fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/wavy/male/green.png"
-dest_files=["res://.godot/imported/green.png-1b767e18413d4609be4e4102152e05cd.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/wavy/male/green.png"
+dest_files=["res://.godot/imported/green.png-2b48e8a11adcd8915192fbad99e9e2fe.ctex"]
 
 [params]
 

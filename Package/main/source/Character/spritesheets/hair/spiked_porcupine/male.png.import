@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu4203ug7c3ww"
-path="res://.godot/imported/male.png-b61b467af1c21a1ed7eb71b173fa450d.ctex"
+path="res://.godot/imported/male.png-b61c90e9a9598db521febefdf0c969ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_porcupine/male.png"
-dest_files=["res://.godot/imported/male.png-b61b467af1c21a1ed7eb71b173fa450d.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_porcupine/male.png"
+dest_files=["res://.godot/imported/male.png-b61c90e9a9598db521febefdf0c969ec.ctex"]
 
 [params]
 

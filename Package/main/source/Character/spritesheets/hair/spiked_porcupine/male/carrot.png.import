@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv2mqr1omhaep"
-path="res://.godot/imported/carrot.png-4af08d7ee448a144391736cb8105effe.ctex"
+path="res://.godot/imported/carrot.png-e394bb9ddb6a1ca529525e4874ddc157.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_porcupine/male/carrot.png"
-dest_files=["res://.godot/imported/carrot.png-4af08d7ee448a144391736cb8105effe.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_porcupine/male/carrot.png"
+dest_files=["res://.godot/imported/carrot.png-e394bb9ddb6a1ca529525e4874ddc157.ctex"]
 
 [params]
 

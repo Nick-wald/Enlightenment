@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbc4d60pclqel"
-path="res://.godot/imported/blonde.png-d22165fd53b385e850deb870c2d393b7.ctex"
+path="res://.godot/imported/blonde.png-4c38d0704801a0fc6ac7546e9fba40db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shoulderl/female/blonde.png"
-dest_files=["res://.godot/imported/blonde.png-d22165fd53b385e850deb870c2d393b7.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shoulderl/female/blonde.png"
+dest_files=["res://.godot/imported/blonde.png-4c38d0704801a0fc6ac7546e9fba40db.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1cxd7vj7slih"
-path="res://.godot/imported/platinum.png-5c48e7b2c84c78881eba5e21bea3f206.ctex"
+path="res://.godot/imported/platinum.png-3755eaf14e5bc59d04db9ecd8a8042f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_porcupine/female/platinum.png"
-dest_files=["res://.godot/imported/platinum.png-5c48e7b2c84c78881eba5e21bea3f206.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_porcupine/female/platinum.png"
+dest_files=["res://.godot/imported/platinum.png-3755eaf14e5bc59d04db9ecd8a8042f2.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yct3s74ujh1l"
-path="res://.godot/imported/navy.png-4826be5fb77bfd9123be1dfea7451300.ctex"
+path="res://.godot/imported/navy.png-5d2caccb10dd90b27d8af7882d8148b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shorthawk/female/navy.png"
-dest_files=["res://.godot/imported/navy.png-4826be5fb77bfd9123be1dfea7451300.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shorthawk/female/navy.png"
+dest_files=["res://.godot/imported/navy.png-5d2caccb10dd90b27d8af7882d8148b5.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da0217dvgwvkq"
-path="res://.godot/imported/green.png-59d3d7518f80e4925537c607d1686bc6.ctex"
+path="res://.godot/imported/green.png-4833033b68e5289f47523ce513e02c46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_beehive/male/green.png"
-dest_files=["res://.godot/imported/green.png-59d3d7518f80e4925537c607d1686bc6.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_beehive/male/green.png"
+dest_files=["res://.godot/imported/green.png-4833033b68e5289f47523ce513e02c46.ctex"]
 
 [params]
 

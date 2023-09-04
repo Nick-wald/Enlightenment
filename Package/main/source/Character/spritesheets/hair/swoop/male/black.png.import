@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu6ral8i7udrf"
-path="res://.godot/imported/black.png-87940b8dafe2cd72146064d01b1da484.ctex"
+path="res://.godot/imported/black.png-8d6c1585ba0988fa997b6861e0c64612.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/swoop/male/black.png"
-dest_files=["res://.godot/imported/black.png-87940b8dafe2cd72146064d01b1da484.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/swoop/male/black.png"
+dest_files=["res://.godot/imported/black.png-8d6c1585ba0988fa997b6861e0c64612.ctex"]
 
 [params]
 

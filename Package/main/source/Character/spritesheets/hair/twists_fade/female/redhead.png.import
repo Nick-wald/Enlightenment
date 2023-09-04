@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1r86swmwbhx3"
-path="res://.godot/imported/redhead.png-1cb3bed59a8b7af562bdafba2e3042b1.ctex"
+path="res://.godot/imported/redhead.png-e2023c1458708ac7073a83d43e14007a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/twists_fade/female/redhead.png"
-dest_files=["res://.godot/imported/redhead.png-1cb3bed59a8b7af562bdafba2e3042b1.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/twists_fade/female/redhead.png"
+dest_files=["res://.godot/imported/redhead.png-e2023c1458708ac7073a83d43e14007a.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkc0i7pt8p5gv"
-path="res://.godot/imported/ash.png-dd18fcbc51b575ba6d6b49d246b21faf.ctex"
+path="res://.godot/imported/ash.png-4dac250a04b4505a3dae2736b6690c15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_liberty2/female/ash.png"
-dest_files=["res://.godot/imported/ash.png-dd18fcbc51b575ba6d6b49d246b21faf.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_liberty2/female/ash.png"
+dest_files=["res://.godot/imported/ash.png-4dac250a04b4505a3dae2736b6690c15.ctex"]
 
 [params]
 

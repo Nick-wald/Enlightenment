@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyphnau4mfkf2"
-path="res://.godot/imported/gold.png-cab786f0afbf6462e6550c77f1381472.ctex"
+path="res://.godot/imported/gold.png-f1167a5509519bb51930c596daee86e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_liberty/male/gold.png"
-dest_files=["res://.godot/imported/gold.png-cab786f0afbf6462e6550c77f1381472.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_liberty/male/gold.png"
+dest_files=["res://.godot/imported/gold.png-f1167a5509519bb51930c596daee86e5.ctex"]
 
 [params]
 

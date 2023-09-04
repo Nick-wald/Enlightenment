@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbb5gesjpyptj"
-path="res://.godot/imported/chestnut.png-081506d49d400b1ed6a3b678b3f355b9.ctex"
+path="res://.godot/imported/chestnut.png-e7b9493eabae822ec60be527cc1f9af5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_porcupine/female/chestnut.png"
-dest_files=["res://.godot/imported/chestnut.png-081506d49d400b1ed6a3b678b3f355b9.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_porcupine/female/chestnut.png"
+dest_files=["res://.godot/imported/chestnut.png-e7b9493eabae822ec60be527cc1f9af5.ctex"]
 
 [params]
 

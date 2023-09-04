@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvnwa51vi8qa2"
-path="res://.godot/imported/strawberry.png-a5b1aa4475a3ebc3cbdf5be68afe7814.ctex"
+path="res://.godot/imported/strawberry.png-d3e0b1e7b1a7fadfad2ab7f3d82df291.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/swoop/female/strawberry.png"
-dest_files=["res://.godot/imported/strawberry.png-a5b1aa4475a3ebc3cbdf5be68afe7814.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/swoop/female/strawberry.png"
+dest_files=["res://.godot/imported/strawberry.png-d3e0b1e7b1a7fadfad2ab7f3d82df291.ctex"]
 
 [params]
 

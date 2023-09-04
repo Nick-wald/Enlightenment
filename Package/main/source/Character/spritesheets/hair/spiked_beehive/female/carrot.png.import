@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctt7isuldbfi2"
-path="res://.godot/imported/carrot.png-d305b0ed21ac44e52ed05017ba2e4dbf.ctex"
+path="res://.godot/imported/carrot.png-f612772aaeb4a52eccc6ef6e28736f70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_beehive/female/carrot.png"
-dest_files=["res://.godot/imported/carrot.png-d305b0ed21ac44e52ed05017ba2e4dbf.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_beehive/female/carrot.png"
+dest_files=["res://.godot/imported/carrot.png-f612772aaeb4a52eccc6ef6e28736f70.ctex"]
 
 [params]
 

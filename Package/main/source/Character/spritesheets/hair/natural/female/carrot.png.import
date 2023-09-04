@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://g31rufpgyjj"
-path="res://.godot/imported/carrot.png-d710d0c7c8b6ed0e4dea0ca5508c4d74.ctex"
+path="res://.godot/imported/carrot.png-0192c1655cc780a80232ab0f6df20f02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/natural/female/carrot.png"
-dest_files=["res://.godot/imported/carrot.png-d710d0c7c8b6ed0e4dea0ca5508c4d74.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/natural/female/carrot.png"
+dest_files=["res://.godot/imported/carrot.png-0192c1655cc780a80232ab0f6df20f02.ctex"]
 
 [params]
 

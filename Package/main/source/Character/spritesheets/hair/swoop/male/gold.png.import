@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2dmc3kjnhm8f"
-path="res://.godot/imported/gold.png-867dbef001670c4ed5d9548e05ea401b.ctex"
+path="res://.godot/imported/gold.png-ba9472be7e5158cfcbf0ac0b961336af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/swoop/male/gold.png"
-dest_files=["res://.godot/imported/gold.png-867dbef001670c4ed5d9548e05ea401b.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/swoop/male/gold.png"
+dest_files=["res://.godot/imported/gold.png-ba9472be7e5158cfcbf0ac0b961336af.ctex"]
 
 [params]
 

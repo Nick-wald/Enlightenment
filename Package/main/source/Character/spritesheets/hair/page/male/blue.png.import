@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvd8ejghm4sp5"
-path="res://.godot/imported/blue.png-dc17013a55d2a8984b6f5df597352bb6.ctex"
+path="res://.godot/imported/blue.png-87c2c6cd34ffc92525b68c44cc35720b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/page/male/blue.png"
-dest_files=["res://.godot/imported/blue.png-dc17013a55d2a8984b6f5df597352bb6.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/page/male/blue.png"
+dest_files=["res://.godot/imported/blue.png-87c2c6cd34ffc92525b68c44cc35720b.ctex"]
 
 [params]
 

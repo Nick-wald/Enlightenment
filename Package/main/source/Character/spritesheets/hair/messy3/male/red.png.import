@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blascjjgr6grw"
-path="res://.godot/imported/red.png-e8b644551fed0c4b64f2e61e1ea172cc.ctex"
+path="res://.godot/imported/red.png-e4d9852a0dbb095f7f84a0a33b3494a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/messy3/male/red.png"
-dest_files=["res://.godot/imported/red.png-e8b644551fed0c4b64f2e61e1ea172cc.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/messy3/male/red.png"
+dest_files=["res://.godot/imported/red.png-e4d9852a0dbb095f7f84a0a33b3494a4.ctex"]
 
 [params]
 

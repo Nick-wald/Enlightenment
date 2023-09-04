@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx3ffh7swx02k"
-path="res://.godot/imported/orange.png-20de7c698a114ffbaef22a6d5e4113be.ctex"
+path="res://.godot/imported/orange.png-5d161ce45eed4fc5e79e1090859e470b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_beehive/female/orange.png"
-dest_files=["res://.godot/imported/orange.png-20de7c698a114ffbaef22a6d5e4113be.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_beehive/female/orange.png"
+dest_files=["res://.godot/imported/orange.png-5d161ce45eed4fc5e79e1090859e470b.ctex"]
 
 [params]
 

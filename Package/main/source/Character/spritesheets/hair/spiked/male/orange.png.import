@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eh0br2w8e161"
-path="res://.godot/imported/orange.png-91dcaa51cb430ec3b319373f8dfbf3a4.ctex"
+path="res://.godot/imported/orange.png-10e0117930d8de87a5e1f6304325f3e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked/male/orange.png"
-dest_files=["res://.godot/imported/orange.png-91dcaa51cb430ec3b319373f8dfbf3a4.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked/male/orange.png"
+dest_files=["res://.godot/imported/orange.png-10e0117930d8de87a5e1f6304325f3e2.ctex"]
 
 [params]
 

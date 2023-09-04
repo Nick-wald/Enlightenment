@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uk2qsig315i3"
-path="res://.godot/imported/ash.png-804e0abfef694d2e10715132523d7385.ctex"
+path="res://.godot/imported/ash.png-1f56de28b2aa2b8b67b7ae04590f221c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/swoop/male/ash.png"
-dest_files=["res://.godot/imported/ash.png-804e0abfef694d2e10715132523d7385.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/swoop/male/ash.png"
+dest_files=["res://.godot/imported/ash.png-1f56de28b2aa2b8b67b7ae04590f221c.ctex"]
 
 [params]
 

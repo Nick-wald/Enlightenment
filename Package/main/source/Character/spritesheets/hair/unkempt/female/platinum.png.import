@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://x74av7o2pj7n"
-path="res://.godot/imported/platinum.png-f7defef265135bf01cb706941bdcca03.ctex"
+path="res://.godot/imported/platinum.png-643d4509da0e903bad4a9e4a42e36954.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/unkempt/female/platinum.png"
-dest_files=["res://.godot/imported/platinum.png-f7defef265135bf01cb706941bdcca03.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/unkempt/female/platinum.png"
+dest_files=["res://.godot/imported/platinum.png-643d4509da0e903bad4a9e4a42e36954.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcutvs5jrhjos"
-path="res://.godot/imported/orange.png-0e8c1e2852d9f516af8fe2626cf83f06.ctex"
+path="res://.godot/imported/orange.png-dec09fac46904671a6c2e8a00774c7ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/wavy/female/orange.png"
-dest_files=["res://.godot/imported/orange.png-0e8c1e2852d9f516af8fe2626cf83f06.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/wavy/female/orange.png"
+dest_files=["res://.godot/imported/orange.png-dec09fac46904671a6c2e8a00774c7ee.ctex"]
 
 [params]
 

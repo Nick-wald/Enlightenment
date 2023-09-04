@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6crsspfddhyg"
-path="res://.godot/imported/rose.png-2743024dd03ae5b11b0256f8deb0860d.ctex"
+path="res://.godot/imported/rose.png-e40edb4cc7e5c8efbb4b535244c2c28e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_beehive/female/rose.png"
-dest_files=["res://.godot/imported/rose.png-2743024dd03ae5b11b0256f8deb0860d.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_beehive/female/rose.png"
+dest_files=["res://.godot/imported/rose.png-e40edb4cc7e5c8efbb4b535244c2c28e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0vnh18rlmbh5"
-path="res://.godot/imported/platinum.png-b53afb8ac81c1786c3b5973afc509a14.ctex"
+path="res://.godot/imported/platinum.png-db817430aefb80c0cef9ced03736096c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/twists_fade/male/platinum.png"
-dest_files=["res://.godot/imported/platinum.png-b53afb8ac81c1786c3b5973afc509a14.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/twists_fade/male/platinum.png"
+dest_files=["res://.godot/imported/platinum.png-db817430aefb80c0cef9ced03736096c.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brp21xdsfc2fu"
-path="res://.godot/imported/gray.png-71541fa7eacace74a3955e1801d9b63d.ctex"
+path="res://.godot/imported/gray.png-e97ffa45c09ef6c67365f4c597ba9cc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/unkempt/female/gray.png"
-dest_files=["res://.godot/imported/gray.png-71541fa7eacace74a3955e1801d9b63d.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/unkempt/female/gray.png"
+dest_files=["res://.godot/imported/gray.png-e97ffa45c09ef6c67365f4c597ba9cc4.ctex"]
 
 [params]
 

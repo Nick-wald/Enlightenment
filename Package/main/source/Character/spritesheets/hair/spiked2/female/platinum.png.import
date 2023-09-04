@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnbctqalpagkm"
-path="res://.godot/imported/platinum.png-7699b31fd317accd6a8ce5902be1632e.ctex"
+path="res://.godot/imported/platinum.png-3923010f87d86e968c0b0c224a0b2014.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked2/female/platinum.png"
-dest_files=["res://.godot/imported/platinum.png-7699b31fd317accd6a8ce5902be1632e.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked2/female/platinum.png"
+dest_files=["res://.godot/imported/platinum.png-3923010f87d86e968c0b0c224a0b2014.ctex"]
 
 [params]
 

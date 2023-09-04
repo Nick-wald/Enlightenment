@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vlahu4cryov7"
-path="res://.godot/imported/purple.png-ded169497624f7631e1730b26e5302bd.ctex"
+path="res://.godot/imported/purple.png-b1995b2215f714f2eca6b6d43acbfba8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked/male/purple.png"
-dest_files=["res://.godot/imported/purple.png-ded169497624f7631e1730b26e5302bd.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked/male/purple.png"
+dest_files=["res://.godot/imported/purple.png-b1995b2215f714f2eca6b6d43acbfba8.ctex"]
 
 [params]
 

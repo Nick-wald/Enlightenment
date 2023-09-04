@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://biljof150rgk2"
-path="res://.godot/imported/rose.png-fcdf29b730e809af0091c76bf9475d18.ctex"
+path="res://.godot/imported/rose.png-fc9401c86237fa87c4d07e12bf7a4ada.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/wavy/female/rose.png"
-dest_files=["res://.godot/imported/rose.png-fcdf29b730e809af0091c76bf9475d18.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/wavy/female/rose.png"
+dest_files=["res://.godot/imported/rose.png-fc9401c86237fa87c4d07e12bf7a4ada.ctex"]
 
 [params]
 

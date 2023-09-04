@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://n6c5vrnxorvm"
-path="res://.godot/imported/light_brown.png-439f3c8976254c261469df06e6763737.ctex"
+path="res://.godot/imported/light_brown.png-5e229c28d02d4840cee361b36131731b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/unkempt/male/light_brown.png"
-dest_files=["res://.godot/imported/light_brown.png-439f3c8976254c261469df06e6763737.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/unkempt/male/light_brown.png"
+dest_files=["res://.godot/imported/light_brown.png-5e229c28d02d4840cee361b36131731b.ctex"]
 
 [params]
 

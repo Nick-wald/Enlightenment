@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cd7ln4x8bbt3f"
-path="res://.godot/imported/light_brown.png-acdeb9f40a0f06551c3e9e35edfd6a31.ctex"
+path="res://.godot/imported/light_brown.png-0d7fc581278d6f87f02b17cf979c0f36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shorthawk/male/light_brown.png"
-dest_files=["res://.godot/imported/light_brown.png-acdeb9f40a0f06551c3e9e35edfd6a31.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shorthawk/male/light_brown.png"
+dest_files=["res://.godot/imported/light_brown.png-0d7fc581278d6f87f02b17cf979c0f36.ctex"]
 
 [params]
 

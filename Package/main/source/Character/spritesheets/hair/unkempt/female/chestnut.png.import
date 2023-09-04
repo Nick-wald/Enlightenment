@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cymaiv74mlu5q"
-path="res://.godot/imported/chestnut.png-8ca9661bf8c726cf9cc98590d70d049a.ctex"
+path="res://.godot/imported/chestnut.png-c4570d7285cc0fafe443fe06c061172a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/unkempt/female/chestnut.png"
-dest_files=["res://.godot/imported/chestnut.png-8ca9661bf8c726cf9cc98590d70d049a.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/unkempt/female/chestnut.png"
+dest_files=["res://.godot/imported/chestnut.png-c4570d7285cc0fafe443fe06c061172a.ctex"]
 
 [params]
 

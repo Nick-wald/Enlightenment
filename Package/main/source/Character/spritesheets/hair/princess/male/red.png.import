@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp3tcuymlbnin"
-path="res://.godot/imported/red.png-e8851c1a0533770f07ced28aad0188fb.ctex"
+path="res://.godot/imported/red.png-ab9aabcea760d2b403e2fbb9c0f2c938.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/princess/male/red.png"
-dest_files=["res://.godot/imported/red.png-e8851c1a0533770f07ced28aad0188fb.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/princess/male/red.png"
+dest_files=["res://.godot/imported/red.png-ab9aabcea760d2b403e2fbb9c0f2c938.ctex"]
 
 [params]
 

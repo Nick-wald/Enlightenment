@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhnyalrnqgjb4"
-path="res://.godot/imported/sandy.png-f242519de1924b0395a072c6b91bd071.ctex"
+path="res://.godot/imported/sandy.png-3e8575232b308ecbe1fe87b25ec8e9bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/princess/male/sandy.png"
-dest_files=["res://.godot/imported/sandy.png-f242519de1924b0395a072c6b91bd071.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/princess/male/sandy.png"
+dest_files=["res://.godot/imported/sandy.png-3e8575232b308ecbe1fe87b25ec8e9bc.ctex"]
 
 [params]
 

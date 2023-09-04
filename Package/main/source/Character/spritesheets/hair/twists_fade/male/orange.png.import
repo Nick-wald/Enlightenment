@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1qn6u2gr7bxj"
-path="res://.godot/imported/orange.png-d9d114638ec50439b5767aac8e014d37.ctex"
+path="res://.godot/imported/orange.png-729a3d5a99627def3b2ad8b1cbd3dac4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/twists_fade/male/orange.png"
-dest_files=["res://.godot/imported/orange.png-d9d114638ec50439b5767aac8e014d37.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/twists_fade/male/orange.png"
+dest_files=["res://.godot/imported/orange.png-729a3d5a99627def3b2ad8b1cbd3dac4.ctex"]
 
 [params]
 

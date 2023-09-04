@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://biydyd2y3du4e"
-path="res://.godot/imported/light_brown.png-a70cc268ae4b5082e5860320a71e1dbe.ctex"
+path="res://.godot/imported/light_brown.png-266dc65dc881107d4e04281033f1bba1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/page2/female/light_brown.png"
-dest_files=["res://.godot/imported/light_brown.png-a70cc268ae4b5082e5860320a71e1dbe.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/page2/female/light_brown.png"
+dest_files=["res://.godot/imported/light_brown.png-266dc65dc881107d4e04281033f1bba1.ctex"]
 
 [params]
 

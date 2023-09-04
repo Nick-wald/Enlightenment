@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2g0xtdfqqql"
-path="res://.godot/imported/ash.png-5acbb0e02777b3ee6614f0d248df8857.ctex"
+path="res://.godot/imported/ash.png-fff6209b995ef3d4fe3b4ae38a605f5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/wavy/female/ash.png"
-dest_files=["res://.godot/imported/ash.png-5acbb0e02777b3ee6614f0d248df8857.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/wavy/female/ash.png"
+dest_files=["res://.godot/imported/ash.png-fff6209b995ef3d4fe3b4ae38a605f5d.ctex"]
 
 [params]
 

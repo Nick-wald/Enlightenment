@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddye48o5ubpa"
-path="res://.godot/imported/dark_gray.png-8948e199895cb87b1b5bf2a5dfa2fc35.ctex"
+path="res://.godot/imported/dark_gray.png-4766d985b4f86d3ac2634c6b272182c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/twists_fade/female/dark_gray.png"
-dest_files=["res://.godot/imported/dark_gray.png-8948e199895cb87b1b5bf2a5dfa2fc35.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/twists_fade/female/dark_gray.png"
+dest_files=["res://.godot/imported/dark_gray.png-4766d985b4f86d3ac2634c6b272182c0.ctex"]
 
 [params]
 

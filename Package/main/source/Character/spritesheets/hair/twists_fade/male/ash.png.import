@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgwcvvj587uke"
-path="res://.godot/imported/ash.png-eb790f6c8b7b4bc5456d7377c7044764.ctex"
+path="res://.godot/imported/ash.png-6a0bbd0b942ee762fa3123802fdb9655.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/twists_fade/male/ash.png"
-dest_files=["res://.godot/imported/ash.png-eb790f6c8b7b4bc5456d7377c7044764.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/twists_fade/male/ash.png"
+dest_files=["res://.godot/imported/ash.png-6a0bbd0b942ee762fa3123802fdb9655.ctex"]
 
 [params]
 

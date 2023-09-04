@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbuo8kv4h6rmk"
-path="res://.godot/imported/rose.png-6a1df218b1972489cd3d4746ab617084.ctex"
+path="res://.godot/imported/rose.png-cbdbe640a2de7ccebbc77aa99aac853c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shoulderr/male/rose.png"
-dest_files=["res://.godot/imported/rose.png-6a1df218b1972489cd3d4746ab617084.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shoulderr/male/rose.png"
+dest_files=["res://.godot/imported/rose.png-cbdbe640a2de7ccebbc77aa99aac853c.ctex"]
 
 [params]
 

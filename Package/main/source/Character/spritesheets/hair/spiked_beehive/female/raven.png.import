@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy5g2rsbr5rdh"
-path="res://.godot/imported/raven.png-8d6ee64de5b234eab9c8333b02949685.ctex"
+path="res://.godot/imported/raven.png-822bd7499b6a2510b8d191524a8bd052.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_beehive/female/raven.png"
-dest_files=["res://.godot/imported/raven.png-8d6ee64de5b234eab9c8333b02949685.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_beehive/female/raven.png"
+dest_files=["res://.godot/imported/raven.png-822bd7499b6a2510b8d191524a8bd052.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cybqclof01kb8"
-path="res://.godot/imported/female.png-82454212bf6482c8669562ed973706ba.ctex"
+path="res://.godot/imported/female.png-1d81781925d8b763ce98836e56fcd377.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shorthawk/female.png"
-dest_files=["res://.godot/imported/female.png-82454212bf6482c8669562ed973706ba.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shorthawk/female.png"
+dest_files=["res://.godot/imported/female.png-1d81781925d8b763ce98836e56fcd377.ctex"]
 
 [params]
 

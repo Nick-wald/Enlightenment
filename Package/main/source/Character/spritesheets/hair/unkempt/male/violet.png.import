@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxm4fejqk872y"
-path="res://.godot/imported/violet.png-53babc3b976ce169dbce7476ef14914a.ctex"
+path="res://.godot/imported/violet.png-6c6e6320d236154a69610d4a39903e53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/unkempt/male/violet.png"
-dest_files=["res://.godot/imported/violet.png-53babc3b976ce169dbce7476ef14914a.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/unkempt/male/violet.png"
+dest_files=["res://.godot/imported/violet.png-6c6e6320d236154a69610d4a39903e53.ctex"]
 
 [params]
 

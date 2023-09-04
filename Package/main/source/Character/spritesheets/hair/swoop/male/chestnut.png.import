@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://24d7vvsrr2mp"
-path="res://.godot/imported/chestnut.png-dfe865c2c8f8e15d678140b8fcab1370.ctex"
+path="res://.godot/imported/chestnut.png-eda872f4c87906b20c98174ceded7630.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/swoop/male/chestnut.png"
-dest_files=["res://.godot/imported/chestnut.png-dfe865c2c8f8e15d678140b8fcab1370.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/swoop/male/chestnut.png"
+dest_files=["res://.godot/imported/chestnut.png-eda872f4c87906b20c98174ceded7630.ctex"]
 
 [params]
 

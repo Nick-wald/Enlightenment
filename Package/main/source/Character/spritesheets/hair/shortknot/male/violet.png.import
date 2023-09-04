@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6g5ug13u0nj7"
-path="res://.godot/imported/violet.png-d31af2fbb1336d4b7ee462cd6a5c8128.ctex"
+path="res://.godot/imported/violet.png-2ce62bee5323bbe6de8a07d821aa06cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shortknot/male/violet.png"
-dest_files=["res://.godot/imported/violet.png-d31af2fbb1336d4b7ee462cd6a5c8128.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shortknot/male/violet.png"
+dest_files=["res://.godot/imported/violet.png-2ce62bee5323bbe6de8a07d821aa06cc.ctex"]
 
 [params]
 

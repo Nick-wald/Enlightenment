@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjbqenucuy4jb"
-path="res://.godot/imported/green.png-d1a97bee406b8270cc961413f8db3a6d.ctex"
+path="res://.godot/imported/green.png-e15c4c6a34d473a708132bba79ae56bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/swoop/female/green.png"
-dest_files=["res://.godot/imported/green.png-d1a97bee406b8270cc961413f8db3a6d.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/swoop/female/green.png"
+dest_files=["res://.godot/imported/green.png-e15c4c6a34d473a708132bba79ae56bb.ctex"]
 
 [params]
 

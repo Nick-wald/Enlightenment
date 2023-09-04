@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4b3vfe7ocmhc"
-path="res://.godot/imported/black.png-f24ab438d8399a7ece04b52759909034.ctex"
+path="res://.godot/imported/black.png-a9162e8e2514b05567cb3521dfc33bbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/sara/male/black.png"
-dest_files=["res://.godot/imported/black.png-f24ab438d8399a7ece04b52759909034.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/sara/male/black.png"
+dest_files=["res://.godot/imported/black.png-a9162e8e2514b05567cb3521dfc33bbf.ctex"]
 
 [params]
 

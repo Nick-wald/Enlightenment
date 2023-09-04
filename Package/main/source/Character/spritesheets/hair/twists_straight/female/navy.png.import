@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b38w6w2ltha2"
-path="res://.godot/imported/navy.png-13e7fe8dbb4371327f3e6e51cd1d4638.ctex"
+path="res://.godot/imported/navy.png-2cff09fe398ea3291498c450a6c83079.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/twists_straight/female/navy.png"
-dest_files=["res://.godot/imported/navy.png-13e7fe8dbb4371327f3e6e51cd1d4638.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/twists_straight/female/navy.png"
+dest_files=["res://.godot/imported/navy.png-2cff09fe398ea3291498c450a6c83079.ctex"]
 
 [params]
 

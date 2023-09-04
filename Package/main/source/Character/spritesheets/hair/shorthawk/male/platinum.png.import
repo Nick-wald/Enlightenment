@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgi53d5tehjl"
-path="res://.godot/imported/platinum.png-e30c831df7e36d4b74523e47b603707b.ctex"
+path="res://.godot/imported/platinum.png-9a68f15005bb5c9e3660c4aed2b9552b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/shorthawk/male/platinum.png"
-dest_files=["res://.godot/imported/platinum.png-e30c831df7e36d4b74523e47b603707b.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/shorthawk/male/platinum.png"
+dest_files=["res://.godot/imported/platinum.png-9a68f15005bb5c9e3660c4aed2b9552b.ctex"]
 
 [params]
 

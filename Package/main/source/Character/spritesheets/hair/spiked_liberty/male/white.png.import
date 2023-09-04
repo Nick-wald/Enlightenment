@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvsxyc61muci6"
-path="res://.godot/imported/white.png-d7b7f062f49ce02308e9deb1adb05b48.ctex"
+path="res://.godot/imported/white.png-2c64e09df3cd4d461b2210cde251d67c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_liberty/male/white.png"
-dest_files=["res://.godot/imported/white.png-d7b7f062f49ce02308e9deb1adb05b48.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_liberty/male/white.png"
+dest_files=["res://.godot/imported/white.png-2c64e09df3cd4d461b2210cde251d67c.ctex"]
 
 [params]
 

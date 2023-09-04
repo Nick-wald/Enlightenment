@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bysgdaj04pnq6"
-path="res://.godot/imported/chestnut.png-268681234c7a1ea9a84f65f72c3009c7.ctex"
+path="res://.godot/imported/chestnut.png-130776fcf1827f7a6b7be14403f8c7a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sources/Character/spritesheets/hair/spiked_liberty2/female/chestnut.png"
-dest_files=["res://.godot/imported/chestnut.png-268681234c7a1ea9a84f65f72c3009c7.ctex"]
+source_file="res://Package/main/source/Character/spritesheets/hair/spiked_liberty2/female/chestnut.png"
+dest_files=["res://.godot/imported/chestnut.png-130776fcf1827f7a6b7be14403f8c7a3.ctex"]
 
 [params]
 
