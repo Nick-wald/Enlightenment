@@ -1,7 +1,0 @@
-{
-	"name": "Enlightenment Basic Package",
-	"version": "v2023.9.1.0",
-	"type": "main",
-	"description": "启明引擎主体，必要的加载项。",
-	"require": []
-}

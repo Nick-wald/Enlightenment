@@ -1,0 +1,35 @@
+{
+	"version": "1.0.0",
+	"BGM": {
+		"scenesList": {
+			"Beginning": [
+				{
+					"song": "Enlightenment",
+					"loop": -1
+				}
+			],
+			"Transition": [
+				{
+					"song": "Enlightenment",
+					"loop": -1
+				}
+			]
+		},
+		"Enlightenment": "source/BGM/Enlightenment.ogg"
+	},
+	"UI": {
+		"ButtomClick": "source/UI/ButtomClick.wav",
+		"ButtomCancel": "source/UI/ButtomCancel.wav",
+		"ButtomApply": "source/UI/ButtomApply.wav",
+		"ButtomNO": "source/UI/ButtomNO.wav",
+		"ButtomOK": "source/UI/ButtomOK.wav",
+		"ButtomSelect": "source/UI/ButtomSelect.wav"
+	},
+	"SFX": {
+		"ClothPull": ["source/SFX/ClothPull", 1, 10, "mp3"],
+		"ClothDrop": ["source/SFX/ClothDrop", 1, 10, "mp3"],
+		"Lock": "source/SFX/Lock.mp3",
+		"Paper": ["source/SFX/Paper", 1, 1, "mp3"],
+		"Ring": "source/SFX/Ring.mp3"
+	}
+}

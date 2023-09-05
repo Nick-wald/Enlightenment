@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bythiypfrfmub"
+
+[deps]
+
+files=["res://Package/Enlightenment/source/Character/sheet_definitions/z_positions.layer.translation", "res://Package/Enlightenment/source/Character/sheet_definitions/z_positions.zPos.translation", "res://Package/Enlightenment/source/Character/sheet_definitions/z_positions.images.translation"]
+
+source_file="res://Package/Enlightenment/source/Character/sheet_definitions/z_positions.csv"
+dest_files=["res://Package/Enlightenment/source/Character/sheet_definitions/z_positions.layer.translation", "res://Package/Enlightenment/source/Character/sheet_definitions/z_positions.zPos.translation", "res://Package/Enlightenment/source/Character/sheet_definitions/z_positions.images.translation"]
+
+[params]
+
+compress=true
+delimiter=0

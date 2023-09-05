@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://br6xhlj54sx57"]
+
+[ext_resource type="Script" path="res://Package/Enlightenment/source/components/EntityModel.gd" id="1_2mxn0"]
+[ext_resource type="Script" path="res://Package/Enlightenment/source/components/EntityCharacter.gd" id="2_i2wvd"]
+
+[node name="EntityModel" type="Node"]
+script = ExtResource("1_2mxn0")
+
+[node name="EntityCharacter" type="Node" parent="."]
+script = ExtResource("2_i2wvd")
+
+[node name="EntityThing" type="Node" parent="."]
+
+[node name="EntiyBox" type="Node" parent="EntityThing"]
+
+[node name="EntityDoor" type="Node" parent="EntityThing"]
+
+[node name="EntityPaper" type="Node" parent="EntityThing"]

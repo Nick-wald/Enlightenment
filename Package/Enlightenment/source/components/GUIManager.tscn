@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c66haswnbi3ei"]
+
+[ext_resource type="Script" path="res://Package/Enlightenment/source/components/GUIManager.gd" id="1_dbv8f"]
+
+[node name="GUIManager" type="Node"]
+script = ExtResource("1_dbv8f")
+
+[node name="UILayer" type="CanvasLayer" parent="."]

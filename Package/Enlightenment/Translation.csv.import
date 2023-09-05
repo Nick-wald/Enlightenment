@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ipmyq0qjekmn"
+
+[deps]
+
+files=["res://Package/Enlightenment/Translation.en.translation", "res://Package/Enlightenment/Translation.zh_CN.translation", "res://Package/Enlightenment/Translation.zh_TW.translation"]
+
+source_file="res://Package/Enlightenment/Translation.csv"
+dest_files=["res://Package/Enlightenment/Translation.en.translation", "res://Package/Enlightenment/Translation.zh_CN.translation", "res://Package/Enlightenment/Translation.zh_TW.translation"]
+
+[params]
+
+compress=true
+delimiter=0

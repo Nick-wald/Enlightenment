@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://lpjfbtnd8dr"]
+
+[ext_resource type="Script" path="res://Package/Enlightenment/source/components/EntityManager.gd" id="1_owojs"]
+
+[node name="EntityManager" type="Node"]
+script = ExtResource("1_owojs")

@@ -1,0 +1,70 @@
+{
+	"name": "启明主体引擎",
+	"version": "v2023.9.1.0",
+	"type": "Engine",
+	"description": "启明引擎主体，必要的加载项。",
+	"require": [],
+	"start": [
+		"GUIManager",
+		"AudioManager",
+		"GameManager",
+		"TOP"
+	],
+	"Beginning": "Beginning",
+	"Transition": "Transition",
+	"Setting": "config.json",
+	"TransitionTip": "Transition.json",
+	"AudioList": "Audio.json",
+	"scenesPath": "source/scenes/",
+	"scenes": [
+		{
+			"name": "Beginning",
+			"pausable": false
+		},
+		{
+			"name": "Transition",
+			"pausable": false
+		}
+	],
+	"componentsPath": "source/components/",
+	"components": [
+		{
+			"name": "AudioManager",
+		},
+		{
+			"name": "EntityManager",
+			"child": [
+				"EntityModel"
+			]
+		},
+		{
+			"name": "CharacterManager",
+			"child": [
+				"CharacterModel"
+			]
+		},
+		{
+			"name": "ItemManager",
+			"child": [
+				"ItemModel"
+			]
+		},
+		{
+			"name": "EnvManager"
+		},
+		{
+			"name": "GameManager"
+		},
+		{
+			"name": "TOP",
+			"layer": "100"
+		},
+		{
+			"name": "GUIManager",
+			"layer": "99",
+			"child": [
+				"GUIModel"
+			]
+		}
+	]
+}

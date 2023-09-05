@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnam672iyjrey"]
+
+[ext_resource type="Script" path="res://Package/Enlightenment/source/components/CharacterBasic.gd" id="1_jtxa6"]
+
+[node name="CharacterModel" type="Node"]
+
+[node name="CharacterBasic" type="Node" parent="."]
+script = ExtResource("1_jtxa6")

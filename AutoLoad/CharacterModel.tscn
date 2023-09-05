@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnam672iyjrey"]
-
-[ext_resource type="Script" path="res://AutoLoad/CharacterBasic.gd" id="2_bx6ka"]
-
-[node name="CharacterModel" type="Node"]
-
-[node name="CharacterBasic" type="Node" parent="."]
-script = ExtResource("2_bx6ka")

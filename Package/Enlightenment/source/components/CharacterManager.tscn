@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7any4wnrn26u"]
+
+[ext_resource type="Script" path="res://Package/Enlightenment/source/components/CharacterManager.gd" id="1_fhijo"]
+
+[node name="CharacterManager" type="Node"]
+script = ExtResource("1_fhijo")
