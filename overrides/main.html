@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  Enlightenment 正式支持Package啦！~
+{% endblock %}
+
+{% block outdated %}
+  您现在观看的文档并非最新版！
+  <a href="{{ '../' ~ base_url }}">
+    <strong>点我跳转至最新版</strong>
+  </a>
+{% endblock %}

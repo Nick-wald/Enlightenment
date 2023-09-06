@@ -1,0 +1,163 @@
+site_name: Enlightenment启明引擎开发文档
+site_author: Nick wald
+site_url: http://127.0.0.1/
+site_description: Enlightenment启明引擎开发文档
+copyright: Copyright &copy; 2023 Nick wald
+remote_branch: gh-pages
+repo_name: Nick-wald/Enlightenment
+repo_url: https://github.com/Nick-wald/Enlightenment
+edit_uri: edit/gh-docs/docs/
+theme:
+  name: material
+  custom_dir: overrides
+  language: 'zh'
+  icon:
+    edit: material/pencil
+    view: material/eye
+    repo: fontawesome/brands/git-alt
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+  features:
+    - content.action.edit
+    - content.code.copy
+    - content.code.annotate
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - header.autohide
+    #- announce.dismiss
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: 切换至黑夜模式
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至白天模式
+    - primary: indigo
+    - accent: light blue
+plugins:
+  - git-revision-date-localized:
+      type: datetime
+      fallback_to_build_date: true
+      enable_creation_date: true
+  - tags:
+      enabled: true
+      tags_file: tags.md
+  - blog:
+      enabled: true
+      blog_toc: true
+  - search:
+      jieba_dict: dict.txt
+      lang:
+        - en
+        - zh
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Nick-wald
+      name: GitHub地址
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<nickwald@163.com>
+      name: 邮箱
+  version:
+    provider: mike
+    default: stable
+markdown_extensions:
+  - toc:
+      permalink: true
+      permalink_title: 固定链接
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - meta
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - tables
+  - footnotes
+  - pymdownx.blocks.admonition:
+      types:
+        - new # type 能填哪些项，从这里就能找到
+        - settings
+        - note
+        - abstract
+        - info
+        - tip
+        - success
+        - question
+        - warning
+        - failure
+        - danger
+        - bug
+        - example
+        - quote
+  - pymdownx.blocks.details
+  - pymdownx.blocks.html
+  - pymdownx.blocks.definition
+  - pymdownx.blocks.tab:
+      alternate_style: True
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true #对代码块显示行号
+      line_spans: __span
+      pygments_lang_class: true #显示代码所属语言
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - abbr
+  - pymdownx.snippets
+  - def_list
+  - attr_list
+  - md_in_html
+extra_javascript:
+  - javascripts/mathjax.js #mathjax的相对目录（不用写/docs/）
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+nav:
+  - 主页:
+      - index.md
+  - 起步:
+      - guide/index.md
+      - 开发者指南:
+        - guide/developer/index.md
+        - 包: guide/developer/package.md
+      - EnlightenmentRPG开发指南:
+        - guide/EnlightenmentRPG/index.md
+        - 第一步：制作包: guide/EnlightenmentRPG/Step1.md
+  - 参考:
+      - ref/index.md
+      - AutoLoad: ref/AutoLoad.md
+  - 文档编写指南:
+      - HowToBuildDocs.md
+  - 博客:
+      - blog/index.md
