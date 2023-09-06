@@ -25,4 +25,5 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install jieba
       - run: pip install mike
+      - run: pip install git-revision-date-localized
       - run: mkdocs gh-deploy --force
