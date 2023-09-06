@@ -1,5 +1,6 @@
 ---
 date: 2023-9-6
+comments: true
 title: EnlightenmentRPG制作例程
 tags:
   - 范例

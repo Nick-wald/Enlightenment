@@ -1,12 +1,12 @@
 site_name: Enlightenment启明引擎开发文档
 site_author: Nick wald
-site_url: http://127.0.0.1/
+site_url: https://nick-wald.github.io/Enlightenment/
 site_description: Enlightenment启明引擎开发文档
 copyright: Copyright &copy; 2023 Nick wald
 remote_branch: gh-pages
 repo_name: Nick-wald/Enlightenment
 repo_url: https://github.com/Nick-wald/Enlightenment
-edit_uri: edit/gh-docs/docs/
+edit_uri: edit/docs/docs/
 theme:
   name: material
   custom_dir: overrides
@@ -19,6 +19,7 @@ theme:
     next: fontawesome/solid/angle-right
   features:
     - content.action.edit
+    - content.action.view
     - content.code.copy
     - content.code.annotate
     - navigation.tracking
@@ -34,24 +35,21 @@ theme:
     - search.share
     - toc.follow
     - header.autohide
-    #- announce.dismiss
   palette:
-    # Palette toggle for light mode
     - scheme: default
       toggle:
-        icon: material/weather-night
+        icon: material/weather-sunny
         name: 切换至黑夜模式
-    # Palette toggle for dark mode
     - scheme: slate
       toggle:
-        icon: material/weather-sunny
+        icon: material/weather-night
         name: 切换至白天模式
     - primary: indigo
     - accent: light blue
 plugins:
   - git-revision-date-localized:
       type: datetime
-      fallback_to_build_date: true
+      #fallback_to_build_date: true
       enable_creation_date: true
   - tags:
       enabled: true
@@ -63,7 +61,6 @@ plugins:
       jieba_dict: dict.txt
       lang:
         - en
-        - zh
 extra:
   generator: false
   social:
@@ -75,7 +72,10 @@ extra:
       name: 邮箱
   version:
     provider: mike
-    default: stable
+    default:
+      - stable
+      - latest
+      - development
 markdown_extensions:
   - toc:
       permalink: true

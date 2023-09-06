@@ -1,5 +1,6 @@
 ---
 date: 2023-9-6
+comments: true
 title: Enlightenment启明引擎开发文档
 hide:
   - navigation

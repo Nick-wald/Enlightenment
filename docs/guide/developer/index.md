@@ -1,5 +1,6 @@
 ---
 date: 2023-9-6
+comments: true
 title: 开发者指南
 tags:
   - 指南

@@ -1,22 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>http://127.0.0.1/index.html</loc>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/</loc>
          <lastmod>2023-09-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://127.0.0.1/tags.html</loc>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/HowToBuildDocs/</loc>
          <lastmod>2023-09-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://127.0.0.1/blog/index.html</loc>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/tags/</loc>
          <lastmod>2023-09-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://127.0.0.1/tags.html</loc>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/blog/</loc>
+         <lastmod>2023-09-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/guide/</loc>
+         <lastmod>2023-09-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/guide/EnlightenmentRPG/</loc>
+         <lastmod>2023-09-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/guide/EnlightenmentRPG/Step1/</loc>
+         <lastmod>2023-09-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/guide/developer/</loc>
+         <lastmod>2023-09-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/guide/developer/package/</loc>
+         <lastmod>2023-09-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/ref/</loc>
+         <lastmod>2023-09-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/ref/AutoLoad/</loc>
+         <lastmod>2023-09-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nick-wald.github.io/Enlightenment/0.1/tags/</loc>
          <lastmod>2023-09-06</lastmod>
          <changefreq>daily</changefreq>
     </url>

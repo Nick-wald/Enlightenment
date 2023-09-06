@@ -1,4 +1,5 @@
 ---
+date: 2023-9-6
 title: 文档编写全指南
 categories:
   - 维护
