@@ -20,7 +20,7 @@ func setGameMode(mode:GAMEMODE = GAMEMODE.Balance):
 	gamemode = mode
 
 # 投掷骰子
-func Dice(ndn:String = "1d20"):
+func Dice(ndn:String = "1d20") -> int:
 	var times:int = int(ndn.get_slice("d", 0))
 	var dice:int = int(ndn.get_slice("d", 1))
 	var result:int = 0

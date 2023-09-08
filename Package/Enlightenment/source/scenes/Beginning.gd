@@ -29,6 +29,7 @@ func _on_quit_pressed() -> void:
 
 # 开始按钮
 func _on_begin_pressed() -> void:
+	Title.text = "请选择游戏难度"
 	if not startGameMenu and not Anim.is_playing():
 		Anim.play("StartGame")
 		startGameMenu = true
@@ -87,3 +88,7 @@ func _on_balance_pressed():
 func _on_strategy_pressed():
 	Title.text = "已选择：策略模式"
 	(Global.USENODE("GameManager") as GameManager).setGameMode((Global.USENODE("GameManager") as GameManager).GAMEMODE.Strategy)
+
+# 冒险启程
+func _on_start_pressed():
+	(Global.AutoLoad as AutoLoad).TRANSITION("CharacterCreate")

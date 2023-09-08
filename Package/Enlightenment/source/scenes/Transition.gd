@@ -217,7 +217,7 @@ func GOTO() -> void:
 		Global.SceneStack.push_back(gotoScene)
 
 		Global.NODEREMOVE(self.name)
-		print_tree_pretty()
+		get_tree().root.print_tree_pretty()
 	else:
 		(Global.USENODE("TOP") as TOP).CONSOLEERROR("gotoScene.", "Transition.GOTO()")
 		if not Global.SceneStack.is_empty():

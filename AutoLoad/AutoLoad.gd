@@ -2,6 +2,8 @@ extends Node
 class_name AutoLoad # 初始化、自动载入
 
 ### 常量
+# 弹出提示窗口
+@onready var window:AcceptDialog = $AcceptDialog
 # 系统资源根目录
 const AutoLoadPath:String = "res://AutoLoad/"
 # 用户数据根目录
@@ -35,6 +37,7 @@ var DEBUG:bool = false:
 		(Global.USENODE("TOP") as TOP).switchDEBUGmsg()
 
 func _ready():
+	
 	# 初始化
 	if not FileAccess.file_exists(UserDataPath + "config.ini"):
 		INITSETTING()
@@ -120,7 +123,7 @@ func WRITEJSON(path:String, content:Dictionary) -> void:
 	WRITEFILE(path, JSON.stringify(content, "\t"))
 
 # 节点导入
-func NODELOAD(node:Dictionary, target:Node = get_node("/root/AutoLoad")) -> void:
+func NODELOAD(node:Dictionary, target:Node = get_node("/root")) -> void:
 	
 	if Global.InstIDList.has(node.package + "/" + node.name):
 		(Global.USENODE("TOP") as TOP).CONSOLEWARN(node.package + "/" + node.name + " had already in the InstIDList.", "AutoLoad.NODELOAD()")
@@ -254,14 +257,22 @@ func START() -> void:
 	Global.InstIDList["AutoLoad"] = get_instance_id()
 	# 载入包
 	var registerItem:Array[String] = []
+	PackageScanner()
 	if FileAccess.file_exists(UserDataPath + "package.json"):
 		# 获取包的激活状态
-		enablePack = READJSON(UserDataPath + "package.json")
-		for item in enablePack.keys():
-			if enablePack[item]:
-				registerItem.append(item)
-		registerItem.push_front(Global.MainPackage)
-	PackageScanner()
+		var enablePackJSON:Dictionary = READJSON(UserDataPath + "package.json")
+		for package in enablePackJSON.keys():
+			if not enablePack.has(package):
+				enablePack[package] = enablePackJSON[package]
+	for item in enablePack.keys():
+		if enablePack[item]:
+			registerItem.append(item)
+	if registerItem.has(Global.MainPackage):
+		if not registerItem[0] == Global.MainPackage:
+			registerItem.erase(Global.MainPackage)
+			registerItem.push_front(Global.MainPackage)
+	else:
+		window.popup_centered_clamped()
 	activePack(registerItem)
 	
 	# 读取设置
@@ -295,12 +306,18 @@ func PackageScanner() -> void:
 				var PackDir:DirAccess = DirAccess.open(item + pack)
 				if PackDir.file_exists("PackageConfig.json") and PackDir.file_exists("PackageAutoLoad.gd"):
 					var PackCig:Dictionary = READJSON(item + pack + "/PackageConfig.json")
-					if PackCig.has("name") and PackCig.has("version") and PackCig.has("type") and PackDir.dir_exists("./source"):
+					if PackCig.has("name") and PackCig.has("version") and PackCig.has("type"):
 						PackCig["address"] = item + pack + "/"
+						PackCig["PackPoolID"] = pack
 						PackPool[pack] = PackCig
-						if not enablePack.has(pack):
-							enablePack[pack] = false
+						PackPool[pack]["packDir"] = item
+						if pack == Global.MainPackage:
+							enablePack[pack] = true
 					else:
+						PackPool[pack] = Dictionary()
+						PackPool[pack]["packDir"] = item
+						PackPool[pack]["unrecongized"] = true
+						enablePack[pack] = false
 						(Global.USENODE("TOP") as TOP).CONSOLEERROR("Unreconigized package: " + pack + " in " + item, "AutoLoad.PackageScanner()")
 
 # 包挂载器
@@ -362,12 +379,20 @@ func setTransition(transition:String, package:String = Global.DefaultPackage, en
 # 启动包
 func activePack(packageName:Array[String]) -> void:
 	for package in packageName:
-		if not LoadedPackage.has(package) and (PackPool as Dictionary).keys().has(package):
-			if (PackPool[package] as Dictionary).has("require") and not (PackPool[package]["require"] as Array).is_empty():
-				PackRegister(PackPool[package]["require"])
-			PackRegister([package])
 		if not (PackPool as Dictionary).keys().has(package):
 			enablePack[package] = false
+			continue
+		if not LoadedPackage.has(package) and (PackPool as Dictionary).keys().has(package):
+			if (PackPool[package] as Dictionary).has("require") and not (PackPool[package]["require"] as Array).is_empty():
+				for item in PackPool[package]["require"]:
+					PackRegister([item])
+			
+			PackRegister([package])
+			
+			if (PackPool[package] as Dictionary).has("next") and not (PackPool[package]["next"] as Array).is_empty():
+				for item in PackPool[package]["next"]:
+					PackRegister([item])
+		
 
 # 禁用包
 func disablePack(packageName:Array[String]) -> void:
@@ -404,3 +429,22 @@ func READCSV(path:String, delim:String = ",") -> Dictionary:
 	else:
 		(Global.USENODE("TOP") as TOP).CONSOLEERROR("Cannot open csv file: " + path, "AutoLoad.READCSV()")
 		return {}
+
+func getPackageSize(packageName:String) -> int:
+	if PackPool.has(packageName):
+		var DirList:Array = Array()
+		DirList.append(PackageAddress(packageName))
+		var size:int = 0
+		for dir in DirList:
+			var t = DirAccess.open(dir)
+			t.list_dir_begin()
+			var temp:String = t.get_next()
+			while not temp.is_empty():
+				if not t.current_is_dir():
+					size += FileAccess.open(t.get_current_dir() + "/" + temp, FileAccess.READ).get_length()
+				else:
+					DirList.append(t.get_current_dir() + "/" + temp + "/")
+				temp = t.get_next()
+		return size
+	else:
+		return -1

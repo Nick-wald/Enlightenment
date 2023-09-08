@@ -10,6 +10,14 @@ var UIPlayer:AudioStreamPlayer = AudioStreamPlayer.new()
 ### 变量
 # BGM播放列表
 var BGMPlayList:Array = []
+# BGM暂停状态
+var BGMpause:bool = false:
+	set(val):
+		BGMpause = val
+		if val:
+			BGMtran_stop()
+		else:
+			BGMtran_play()
 
 func _ready():
 	# player初始化
@@ -19,8 +27,8 @@ func _ready():
 	Global.playerRegister("BGM", BGMPlayer)
 	Global.playerRegister("SFX", SFXPlayer)
 	Global.playerRegister("UI", UIPlayer)
-	BGMPlayer.finished.connect(Callable(self, "BGMtran"))
-	Global.currentSceneChange.connect(BGMtran)
+	BGMPlayer.finished.connect(BGMtran_finished)
+	Global.currentSceneChange.connect(BGMtran_changeScene)
 
 func _process(_delta):
 	pass
@@ -42,10 +50,18 @@ func play(player, path, random:int = -1) -> void:
 # UI声音播放
 func UISound(type:String, random:int = -1, package:String = Global.DefaultPackage) -> void:
 	var result = Global.audioGet("UI", type, package)
-	if not result == "null":
-		play(UIPlayer, result, random)
-	else:
-		(Global.USENODE("TOP") as TOP).CONSOLEWARN("Unknown UI sound name: " + type, "AudioManager.UISound()")
+	match typeof(result):
+		TYPE_ARRAY:
+			if random < 0:
+				randomize()
+				play(UIPlayer, result[0] + str( randi_range(int(result[1]), int(result[2])) ) + "." + result[3] )
+			else:
+				play(UIPlayer, result[0] + str( clampi(random, int(result[1]), int(result[2])) ) + "." + result[3] )
+		TYPE_STRING:
+			if not result == "null":
+				play(UIPlayer, result, random)
+			else:
+				(Global.USENODE("TOP") as TOP).CONSOLEWARN("Unknown UI sound name: " + type, "AudioManager.UISound()")
 
 # UI音效绑定
 func bindUISound(nodeSignal:Signal, type:String, random:int = -1, package:String = Global.DefaultPackage) -> void:
@@ -58,49 +74,63 @@ func bindSFXSound(nodeSignal:Signal, type:String, random:int = -1, package:Strin
 # SFX声音播放
 func SFXSound(type:String, random:int = -1, package:String = Global.DefaultPackage, player = SFXPlayer) -> void:
 	var result = Global.audioGet("SFX", type, package)
-	if not result == "null":
-		if random < 0 and typeof(result) == TYPE_ARRAY:
-			randomize()
-			play(player, result[0] + str( randi_range(int(result[1]), int(result[2])) ) + "." + result[3] )
-		elif typeof(result) == TYPE_ARRAY:
-			play(player, result[0] + str( clampi(random, int(result[1]), int(result[2])) ) + "." + result[3] )
-		else:
-			play(player, result)
+	match typeof(result):
+		TYPE_ARRAY:
+			if random < 0:
+				randomize()
+				play(player, result[0] + str( randi_range(int(result[1]), int(result[2])) ) + "." + result[3] )
+			else:
+				play(player, result[0] + str( clampi(random, int(result[1]), int(result[2])) ) + "." + result[3] )
+		TYPE_STRING:
+			if not result == "null":
+				play(player, result)
+			else:
+				(Global.USENODE("TOP") as TOP).CONSOLEWARN("Unknown SFX sound name: " + type, "AudioManager.SFXSound()")
 
 # BGM场景设置获取
 func sceneBGM(scene:Dictionary) -> Dictionary:
+	if not scene.has("package") or (scene.package as String).is_empty():
+		scene["package"] = Global.DefaultPackage
 	if (Global.AudioList["BGM"][scene.package] as Dictionary).has("scenesList"):
 		return Global.AudioList["BGM"][scene.package]["scenesList"]
 	else:
 		return {}
 
 # BGM播放处理
-func BGMtran(scene:Dictionary) -> void:
-	if not scene.is_empty() and sceneBGM(scene).has(scene.name):
-		if not BGMPlayList.is_empty() and BGMPlayer.playing:
-			BGMPlayList.resize(1)
-		else:
-			BGMPlayList.clear()
-		for item in (sceneBGM(scene)[scene.name] as Array):
-			if not BGMPlayList.is_empty() and item["song"] == BGMPlayList[0]["song"]:
-				BGMPlayList[0]["loop"] = item["loop"]
-			else:
-				BGMPlayList.append(item)
+func BGMtran_finished(scene:Dictionary = Global.current_scene) -> void:
+	if not (scene.name as String).is_empty() and sceneBGM(scene).has(scene.name):
 		if not BGMPlayer.playing and not BGMPlayList.is_empty():
-			var result
-			if (BGMPlayList[0] as Dictionary).has("package"):
-				result = Global.audioGet("BGM", BGMPlayList[0]["song"], BGMPlayList[0]["package"])
+			if not BGMPlayList[0]["loop"] == 0:
+				BGMPlayList[0]["loop"] -= 1
 			else:
-				result = Global.audioGet("BGM", BGMPlayList[0]["song"])
-			play(BGMPlayer, result)
-	elif not BGMPlayList.is_empty():
-		if not BGMPlayList[0]["loop"] == 0:
-			BGMPlayList[0]["loop"] -= 1
-		else:
-			BGMPlayList.pop_front()
+				BGMPlayList.pop_front()
 			var result
-			if (BGMPlayList[0] as Dictionary).has("package"):
+			if not BGMPlayList.is_empty() and (BGMPlayList[0] as Dictionary).has("package"):
 				result = Global.audioGet("BGM", BGMPlayList[0]["song"], BGMPlayList[0]["package"])
-			else:
+				play(BGMPlayer, result)
+			elif not BGMPlayList.is_empty():
 				result = Global.audioGet("BGM", BGMPlayList[0]["song"])
-			play(BGMPlayer, result)
+				play(BGMPlayer, result)
+			else:
+				BGMtran_changeScene(scene)
+			
+	print(BGMPlayList)
+
+func BGMtran_changeScene(scene:Dictionary = Global.current_scene, cut:bool = false, random:bool = false):
+	if not (scene.name as String).is_empty() and sceneBGM(scene).has(scene.name):
+		BGMPlayList.clear()
+		for item in (sceneBGM(scene)[scene.name] as Array):
+			BGMPlayList.append(item)
+		if random:
+			BGMPlayList.shuffle()
+		if cut:
+			BGMpause = true
+		if not BGMpause:
+			BGMtran_finished(scene)
+
+func BGMtran_stop():
+	BGMPlayer.stop()
+
+
+func BGMtran_play():
+	BGMPlayer.play()

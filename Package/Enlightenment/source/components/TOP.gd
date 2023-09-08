@@ -91,17 +91,14 @@ func staticmemoryusageChangesuffix():
 		await get_tree().create_timer(3).timeout
 		match staticmemoryusage:
 			1:
-				staticmemoryusage = 8
-				staticmemoryusagesuffix = "Bits"
-			8:
 				staticmemoryusage = staticmemoryusage*1024
 				staticmemoryusagesuffix = "KBs"
-			8*1024:
+			1024:
 				staticmemoryusage = staticmemoryusage*1024
 				staticmemoryusagesuffix = "MBs"
-			8*1024*1024:
+			1024*1024:
 				staticmemoryusage = staticmemoryusage*1024
 				staticmemoryusagesuffix = "GBs"
-			8*1024*1024*1024:
+			1024*1024*1024:
 				staticmemoryusage = 1
 				staticmemoryusagesuffix = "Bytes"

@@ -1,9 +1,15 @@
 {
 	"name": "启明主体引擎",
 	"version": "v2023.9.1.0",
+	"author": "Nick wald",
+	"icon": "icon.png",
 	"type": "Engine",
+	"website": "www.nickwald.top",
 	"description": "启明引擎主体，必要的加载项。",
-	"require": [],
+	"next": [
+		"Enlightenment2D",
+		"Enlightenment3D"
+	],
 	"start": [
 		"GUIManager",
 		"AudioManager",
@@ -23,6 +29,10 @@
 		},
 		{
 			"name": "Transition",
+			"pausable": false
+		},
+		{
+			"name": "CharacterCreate",
 			"pausable": false
 		}
 	],

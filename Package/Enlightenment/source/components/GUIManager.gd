@@ -65,7 +65,7 @@ func changeShowmode(mode:String = "null", size:Rect2i = Rect2i(Vector2i(0, 0), w
 		DisplayServer.window_set_size(size.size)
 	if not title == "null":
 		DisplayServer.window_set_title(title)
-	DisplayServer.window_set_position(DisplayServer.get_display_safe_area().size/2)
+	DisplayServer.window_set_position((DisplayServer.get_display_safe_area().size - DisplayServer.window_get_size_with_decorations())/2)
 	DisplayServer.window_request_attention()
 
 # 设置鼠标样式

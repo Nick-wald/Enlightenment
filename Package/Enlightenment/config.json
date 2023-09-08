@@ -3,16 +3,17 @@
 	"config": {
 		"Video": {
 			"Showmode": [
-				"window",
+				"window_fullscreen",
 				"fullscreen",
 				"window_fullscreen",
 				"window"
 				],
 			"Size": [
-				"1280x720",
 				"1920x1080",
+				"1920x1080",
+				"1680x1050",
 				"1600x900",
-				"1280x720"
+				"1440x900"
 				]
 		},
 		"Audio": {
@@ -25,5 +26,17 @@
 			"TRANSITION": 0.5,
 			"TALK": 0.5
 		}
+	},
+	"description": {
+		"Video/Showmode": "游戏显示模式",
+		"Video/Size": "（仅在Window显示模式中有效）游戏窗口大小",
+		"Audio/Master": "主音量",
+		"Audio/BGM": "背景音乐音量",
+		"Audio/BGS": "环境声效音量",
+		"Audio/SFX": "特效音量",
+		"Audio/UI": "UI用户界面音效音量",
+		"Audio/BATTLE": "战斗中音量",
+		"Audio/TRANSITION": "过渡场景音量",
+		"Audio/TALK": "对话音量（包括剧情对话，闲谈，偷听等）"
 	}
 }

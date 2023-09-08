@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjolml4qt1hpp"]
+
+[ext_resource type="Script" path="res://Package/Enlightenment/source/scenes/CharacterCreate.gd" id="1_oe18t"]
+
+[node name="CharacterCreate" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_oe18t")

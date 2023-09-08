@@ -319,6 +319,14 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 texture_filter = 1
 layout_mode = 1
@@ -489,7 +497,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 texture_normal = ExtResource("5_ykbfu")
-stretch_mode = 0
+stretch_mode = 5
 metadata/ButtomType = "select"
 
 [node name="StoryLab" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/StartGameMenu/MarginContainer/VBoxContainer/HBoxContainer/StoryBox"]
@@ -508,7 +516,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 texture_normal = ExtResource("5_ykbfu")
-stretch_mode = 0
+stretch_mode = 5
 metadata/ButtomType = "select"
 
 [node name="BalanceLab" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/StartGameMenu/MarginContainer/VBoxContainer/HBoxContainer/BalanceBox"]
@@ -527,7 +535,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
 texture_normal = ExtResource("5_ykbfu")
-stretch_mode = 0
+stretch_mode = 5
 metadata/ButtomType = "select"
 
 [node name="StrategyLab" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/StartGameMenu/MarginContainer/VBoxContainer/HBoxContainer/StrategyBox"]
@@ -565,3 +573,4 @@ libraries = {
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/StartGameMenu/MarginContainer/VBoxContainer/HBoxContainer/BalanceBox/Balance" to="." method="_on_balance_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/MarginContainer/VBoxContainer/StartGameMenu/MarginContainer/VBoxContainer/HBoxContainer/StrategyBox" to="." method="_on_strategy_box_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/StartGameMenu/MarginContainer/VBoxContainer/HBoxContainer/StrategyBox/Strategy" to="." method="_on_strategy_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/StartGameMenu/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]

@@ -1,0 +1,12 @@
+{
+	"name": "启明主体引擎-2D画面部分",
+	"author": "Nick wald",
+	"icon": "icon.png",
+	"version": "v2023.9.1.0",
+	"type": "Engine",
+	"website": "www.nickwald.top",
+	"description": "启明引擎2D主体，必要的加载项。",
+	"require": [
+		"Enlightenment"
+	],
+}

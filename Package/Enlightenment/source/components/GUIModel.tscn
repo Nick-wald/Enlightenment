@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxl5pjij0odc4"]
+[gd_scene load_steps=14 format=3 uid="uid://dxl5pjij0odc4"]
 
 [ext_resource type="Script" path="res://Package/Enlightenment/source/components/GUIModel.gd" id="1_531oo"]
 [ext_resource type="Theme" uid="uid://cnw25cdhcyxjc" path="res://sources/Default.tres" id="1_ni6fh"]
@@ -6,16 +6,17 @@
 [ext_resource type="Script" path="res://Package/Enlightenment/source/components/Setting.gd" id="3_vathi"]
 [ext_resource type="Texture2D" uid="uid://ekjjm42h00o8" path="res://sources/GUI/Dialog/DialogBasic.png" id="5_3e0yh"]
 [ext_resource type="Script" path="res://Package/Enlightenment/source/components/DLC.gd" id="5_3ioap"]
-[ext_resource type="Texture2D" uid="uid://r2qm0awehrmv" path="res://icon.svg" id="6_ob4n7"]
 [ext_resource type="Script" path="res://Package/Enlightenment/source/components/BarBasic.gd" id="8_kujw8"]
 [ext_resource type="Script" path="res://Package/Enlightenment/source/components/ChapterTitle.gd" id="9_ogaqm"]
 [ext_resource type="Script" path="res://Package/Enlightenment/source/components/DialogBasic.gd" id="10_07lfq"]
+[ext_resource type="Script" path="res://Package/Enlightenment/source/components/CharacterCreateGUI.gd" id="10_p0dhr"]
+[ext_resource type="Texture2D" uid="uid://cmast0bhoitt6" path="res://sources/GUI/CharacterCreate/CharacterCreate_LeftBar.png" id="11_klxn4"]
+[ext_resource type="Script" path="res://Package/Enlightenment/source/components/PauseMenu.gd" id="12_b1v6q"]
 
 [sub_resource type="Theme" id="Theme_u1st0"]
 default_font = ExtResource("3_tmg8p")
 default_font_size = 32
 Button/colors/font_color = Color(0.960784, 0.960784, 0.862745, 1)
-Label/colors/font_color = Color(0, 0, 0, 1)
 ProgressBar/colors/font_color = Color(0.960784, 0.960784, 0.862745, 1)
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 
@@ -85,16 +86,17 @@ theme_override_constants/margin_bottom = 50
 [node name="VBoxContainer" type="VBoxContainer" parent="Setting/SettingBox/TextureRect/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 50
+alignment = 1
 
 [node name="Title" type="Label" parent="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 52
 text = "》游戏设置《"
 
 [node name="Tabs" type="HBoxContainer" parent="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 20
 alignment = 1
 
 [node name="ConfigContainer" type="ScrollContainer" parent="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer"]
@@ -103,6 +105,8 @@ size_flags_vertical = 3
 
 [node name="Configs" type="VBoxContainer" parent="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer/ConfigContainer"]
 layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
 theme_override_constants/separation = 20
 
 [node name="LineEdit" type="LineEdit" parent="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer/ConfigContainer/Configs"]
@@ -116,8 +120,9 @@ layout_mode = 2
 
 [node name="Description" type="Label" parent="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 52
+theme_override_font_sizes/font_size = 32
+text = " 游戏显示模式"
+horizontal_alignment = 1
 
 [node name="Buttoms" type="HBoxContainer" parent="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -139,6 +144,7 @@ text = "应用"
 metadata/ButtomType = "apply"
 
 [node name="DLC" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -197,9 +203,8 @@ theme_override_constants/separation = 50
 
 [node name="Title" type="Label" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 52
-text = "》DLC追加内容《"
+text = "》安装包管理《"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer"]
@@ -207,7 +212,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 30
 
-[node name="ItemList" type="ItemList" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="PackageList" type="ItemList" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 same_column_width = true
@@ -215,19 +220,30 @@ same_column_width = true
 [node name="Detail" type="VBoxContainer" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-theme_override_constants/separation = 30
+theme_override_constants/separation = 10
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/Detail"]
 custom_minimum_size = Vector2(0, 400)
 layout_mode = 2
 
-[node name="ItemIcon" type="TextureRect" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/Detail/AspectRatioContainer"]
+[node name="PackageIcon" type="TextureRect" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/Detail/AspectRatioContainer"]
+texture_filter = 1
 layout_mode = 2
-texture = ExtResource("6_ob4n7")
+
+[node name="Author" type="RichTextLabel" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/Detail"]
+layout_mode = 2
+bbcode_enabled = true
+text = "作者："
+fit_content = true
+
+[node name="Website" type="RichTextLabel" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/Detail"]
+layout_mode = 2
+bbcode_enabled = true
+text = "大小："
+fit_content = true
 
 [node name="Description" type="RichTextLabel" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer/HBoxContainer/Detail"]
 layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "简介："
 fit_content = true
@@ -236,8 +252,6 @@ fit_content = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "启用"
 
 [node name="Buttoms" type="HBoxContainer" parent="DLC/DLCBox/TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -259,6 +273,7 @@ text = "应用"
 metadata/ButtomType = "apply"
 
 [node name="BarBasic" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -268,6 +283,7 @@ grow_vertical = 2
 script = ExtResource("8_kujw8")
 
 [node name="ChapterTitle" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -277,6 +293,7 @@ grow_vertical = 2
 script = ExtResource("9_ogaqm")
 
 [node name="Dialog" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -289,6 +306,70 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("10_07lfq")
+
+[node name="CharacterCreateGUI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_p0dhr")
+
+[node name="MarginContainer" type="MarginContainer" parent="CharacterCreateGUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CharacterCreateGUI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CharacterCreateGUI/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 700)
+layout_mode = 2
+texture = ExtResource("5_3e0yh")
+patch_margin_left = 56
+patch_margin_top = 56
+patch_margin_right = 56
+patch_margin_bottom = 56
+
+[node name="MarginContainer" type="MarginContainer" parent="CharacterCreateGUI/MarginContainer/VBoxContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="CharacterCreateGUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CharacterCreateGUI/MarginContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("11_klxn4")
+patch_margin_top = 48
+patch_margin_bottom = 48
+
+[node name="PauseMenu" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_b1v6q")
 
 [connection signal="pressed" from="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer/Buttoms/Cancel" to="Setting" method="_on_cancel_pressed"]
 [connection signal="pressed" from="Setting/SettingBox/TextureRect/MarginContainer/VBoxContainer/Buttoms/Apply" to="Setting" method="_on_apply_pressed"]

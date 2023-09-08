@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu8ykxsdi5s01"]
+
+[ext_resource type="Script" path="res://Package/Enlightenment2D/PackageAutoLoad.gd" id="1_j7jlp"]
+
+[node name="test" type="Node"]
+script = ExtResource("1_j7jlp")

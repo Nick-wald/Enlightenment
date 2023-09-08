@@ -16,7 +16,8 @@ var TransitionTip:Dictionary = {
 var InstIDList:Dictionary = {}
 # 设置
 var Setting:Dictionary = {
-	"config": {}
+	"config": Dictionary(),
+	"description": Dictionary()
 }
 # 音频总线索引
 var busindex:int = 1
@@ -37,7 +38,7 @@ var current_scene:Dictionary = {
 var SceneStack:Array = []
 
 func _ready():
-	pass
+	readSetting()
 
 func _process(_delta):
 	pass
@@ -50,7 +51,19 @@ func addTransitionTips(TipsList:Dictionary) -> void:
 func addSetting(SettingList:Dictionary, package:String = DefaultPackage) -> void:
 	if not (Setting["config"] as Dictionary).has(package):
 		Setting["config"][package] = Dictionary()
-	Setting["config"][package] = SettingList["config"]
+	for tab in (SettingList["config"] as Dictionary).keys():
+		if not (Setting["config"][package] as Dictionary).has(tab):
+			Setting["config"][package][tab] = SettingList["config"][tab]
+		else:
+			for key in SettingList["config"][tab]:
+				if not (Setting["config"][package][tab] as Dictionary).has(key):
+					Setting["config"][package][tab][key] = SettingList["config"][tab][key]
+	# 设置项描述
+	if SettingList.has("description"):
+		if not Setting.has("description"):
+			Setting["description"] = Dictionary()
+		Setting["description"][package] = SettingList["description"]
+
 # 修改设置项
 func setSetting(tab:String, key:String, val, package:String = DefaultPackage) -> void:
 		Setting["config"][package][tab][key] = val
@@ -89,8 +102,8 @@ func audioRegister(audioType:String, audioName:String, val, package:String = Def
 			# 添加音频总线
 			AudioServer.add_bus(busindex)
 			AudioServer.set_bus_name(busindex, audioType)
-			set_vol(audioType, getSetting("Audio", audioType, package))
 			busindex += 1
+		set_vol(audioType, getSetting("Audio", audioType, package))
 	if not (AudioList[audioType] as Dictionary).has(package):
 		AudioList[audioType][package] = Dictionary()
 	(AudioList[audioType][package] as Dictionary)[audioName] = val
@@ -106,8 +119,9 @@ func audioGet(audioType:String, audioName:String, package:String = DefaultPackag
 					TYPE_STRING:
 						return packAddress + result
 					TYPE_ARRAY:
-						result[0] = packAddress + result[0]
-						return result
+						var res:Array = (result as Array).duplicate(true)
+						res[0] = packAddress + res[0]
+						return res
 			else:
 				(USENODE("TOP") as TOP).CONSOLEWARN("Cannot find audioName: " + audioName +" in AudioList/" + audioType + "/" + package, "Global.audioGet()")
 				return "null"
@@ -218,11 +232,12 @@ func setDefaultPackage(package:String) -> void:
 
 # 设置音量
 func set_vol(audioType:String, vol:float = 0.5) -> void:
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(audioType), linear_to_db(clamp(vol, 0, 1)))
+	if not AudioServer.get_bus_index(audioType) < 0:
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index(audioType), linear_to_db(clamp(vol, 0, 1)))
 
 # 设置当前场景
 func setCurrentScene(nodename:String, package:String = DefaultPackage):
-	if AutoLoad.PackPool.has(package) and (AutoLoad.PackPool[package] as Dictionary).has("scenes"):
+	if AutoLoad.PackPool.keys().has(package) and (AutoLoad.PackPool[package] as Dictionary).has("scenes"):
 		for scene in AutoLoad.PackPool[package]["scenes"]:
 			if nodename == scene.name:
 				current_scene = {
@@ -239,4 +254,4 @@ func saveSetting(path:String = AutoLoad.UserDataPath + "Setting.json"):
 # 读取设置
 func readSetting(path:String = AutoLoad.UserDataPath + "Setting.json"):
 	if FileAccess.file_exists(path):
-		Setting = AutoLoad.READJSON(path)
+		Setting["config"] = AutoLoad.READJSON(path)["config"]
