@@ -18,6 +18,8 @@
         <link rel="prev" href="../blog/">
       
       
+        <link rel="next" href="Enlightenment/">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
@@ -381,8 +383,6 @@
         <div class="md-main__inner md-grid">
           
             
-              
-                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -947,6 +947,12 @@
           
         
       
+        
+      
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -970,6 +976,10 @@
 
             </a>
             
+              <label class="md-nav__link md-nav__link--active" for="__nav_6">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
@@ -979,6 +989,66 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Enlightenment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    启明本体包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Enlightenment2D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    启明2D包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Enlightenment3D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    启明3D包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -996,9 +1066,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1040,65 +1108,20 @@
 
 
 <h1 id="更新日志">更新日志<a class="headerlink" href="#更新日志" title="固定链接">&para;</a></h1>
-<blockquote>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
 <p>就在我人生之旅的中途，</p>
 <p>我在一座昏暗的森林之中醒悟过来，</p>
 <p>因为我在里面迷失了正确的道路。</p>
 <p>——但丁《神曲·地狱篇》</p>
-</blockquote>
-<p><strong>启明（Enlightenment）</strong> 是基于<code>Godot</code>研发的RPG游戏引擎框架。引擎基于面向对象，以节点/组件为基本单位进行开发。为了更快地衔接游戏引擎开发，建议您先阅览下面的简介。</p>
-<h1 id="代码架构速览">代码架构速览<a class="headerlink" href="#代码架构速览" title="固定链接">&para;</a></h1>
-<h2 id="文件夹">文件夹<a class="headerlink" href="#文件夹" title="固定链接">&para;</a></h2>
-<p><code>Godot</code> 默认有两个虚拟文件夹，游戏本体文件一般放在<code>res</code>，用户数据文件一般放在<code>user</code>。为了避免读写权限和文件锁等问题的出现，我们约定，所有的 <code>DLC/mod/游戏存档</code> 都存放在user。</p>
-<h3 id="res">res://<a class="headerlink" href="#res" title="固定链接">&para;</a></h3>
-<ul>
-<li><code>AutoLoad</code> 》 系统组件</li>
-<li><code>scenes</code> 》 游戏场景</li>
-<li><code>sources</code> 》 资源文件</li>
-<li><code>audio</code> 》 音频（BGM/UI/……）</li>
-<li><code>Character</code> 》 角色贴图<ul>
-<li><code>sheet_definitions</code> 》 角色精灵资源定义</li>
-<li><code>spritesheets</code> 》 角色精灵表</li>
-</ul>
-</li>
-<li><code>fonts</code> 》 字体</li>
-<li><code>GUI</code> 》 图像用户界面贴图</li>
-<li><code>shader</code> 》 着色器</li>
-</ul>
-<h3 id="user">user://<a class="headerlink" href="#user" title="固定链接">&para;</a></h3>
-<ul>
-<li><code>DLC</code> 》 DLC附加包</li>
-<li><code>mod</code> 》 mod模组包</li>
-<li><code>logs</code> 》日志</li>
-</ul>
-<h2 id="系统组件">系统组件<a class="headerlink" href="#系统组件" title="固定链接">&para;</a></h2>
-<ul>
-<li><code>AutoLoad</code> 》 游戏入口，单例模式实现，文件层交互</li>
-<li><code>Global</code> 》 全局参数，全局方法</li>
-<li><code>AudioManager</code> 》 音频服务组件（BGM/SFX/BGS……）</li>
-<li><code>EntityManager</code> 》 实体服务组件（实体构造器，实体对象池……）</li>
-<li><code>EntityModel</code>（依赖<code>EntityManager</code>） 》 实体模型（实体原型，容器类实体，开关类实体，门实体……）</li>
-<li><code>CharacterManager</code> 》 角色服务组件（角色构造器，随机角色生成器，角色对象池……）</li>
-<li><code>CharacterModel</code>（依赖<code>CharacterManager</code>，继承<code>EntityModel</code>/<code>EntityCharacter</code>） 》 角色模型</li>
-<li><code>ItemManager</code> 》 物品服务组件（高级物品功能）</li>
-<li><code>ItemModel</code>（依赖于<code>ItemManager</code>）》物品模型（对<code>EntityModel</code>的拓展）</li>
-<li><code>GameManager</code> 》 游戏服务组件（游戏内部功能函数集，游戏功能调度）</li>
-<li><code>EnvManager</code> 》 全局环境服务组件（地图载入/生成，地形计算，游戏时间……）</li>
-<li><code>GUIManager</code> 》 GUI服务组件（绘制GUI）</li>
-<li><code>GUIModel</code>（依赖<code>GUIManager</code>） 》 GUI模型（设置界面，DLC管理界面，对话框……）</li>
-<li><code>TOP</code> 》 顶部GUI层（DEBUG开关提示，报错/警告消息……）</li>
-</ul>
-<h2 id="游戏场景">游戏场景<a class="headerlink" href="#游戏场景" title="固定链接">&para;</a></h2>
-<ul>
-<li><code>Beginning</code> 》 游戏进入首页</li>
-<li><code>Transition</code> 》 游戏加载过渡界面</li>
-</ul>
+</div>
 <h1 id="更新日志_1">更新日志<a class="headerlink" href="#更新日志_1" title="固定链接">&para;</a></h1>
 <h2 id="202391">2023.9.1<a class="headerlink" href="#202391" title="固定链接">&para;</a></h2>
-<blockquote>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
 <p>游离的箭，飞溅的血。</p>
 <p>——《斯皮瑞特族纪实》霍特布·瓦，西尔莱夫国家出版社，西历0年出版</p>
-</blockquote>
+</div>
 <ul>
 <li>Framework</li>
 <li><code>AudioManager</code>:<ul>
@@ -1119,10 +1142,11 @@
 </li>
 </ul>
 <h2 id="202393">2023.9.3<a class="headerlink" href="#202393" title="固定链接">&para;</a></h2>
-<blockquote>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
 <p>代为神罚，惊天动地。</p>
 <p>——《萨布西斯特族传说集》霍特布·瓦，西尔莱夫国家出版社，西历0年出版</p>
-</blockquote>
+</div>
 <ul>
 <li>Framework</li>
 <li><code>Beginning</code>:<ul>
@@ -1152,10 +1176,11 @@
 </li>
 </ul>
 <h2 id="202394">2023.9.4<a class="headerlink" href="#202394" title="固定链接">&para;</a></h2>
-<blockquote>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
 <p>暗夜无声，大象无形。</p>
 <p>——《沙杜奥斯族纪实》霍特布·瓦，西尔莱夫国家出版社，西历0年出版</p>
-</blockquote>
+</div>
 <ul>
 <li>Framework</li>
 <li><code>AutoLoad</code>:<ul>
@@ -1178,10 +1203,11 @@
 </li>
 </ul>
 <h2 id="202395">2023.9.5<a class="headerlink" href="#202395" title="固定链接">&para;</a></h2>
-<blockquote>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
 <p>奥斯丁魔法指南，助您比肩迪尔勒斯族的大魔法师。</p>
 <p>——公会广告栏</p>
-</blockquote>
+</div>
 <ul>
 <li>Framework</li>
 <li><code>AutoLoad</code>:<ul>
@@ -1213,25 +1239,64 @@
 </ul>
 </li>
 </ul>
+<h2 id="202398">2023.9.8<a class="headerlink" href="#202398" title="固定链接">&para;</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>一个对武器极为尊重的民族。</p>
+<p>——《修蒙斯族纪实》霍特布·瓦，西尔莱夫国家出版社，西历0年出版</p>
+</div>
+<ul>
+<li>Framework</li>
+<li><code>AutoLoad</code>:<ul>
+<li>增加：包大小计算方法</li>
+<li>增加： <abbr title="包(Package)，内可含多个组件">包</abbr><code>next</code>字段自动激活后续包</li>
+<li>修复： <abbr title="包(Package)，内可含多个组件">包</abbr><code>require</code>检索失败问题（无法排查出问题，将原<code>Array</code>改用<code>for</code>循环做中间件解析）</li>
+</ul>
+</li>
+<li><code>Global</code>:<ul>
+<li>修复：读取设置时原先设置被覆盖问题</li>
+</ul>
+</li>
+<li><code>Settting</code>:<ul>
+<li>优化：UI布局</li>
+<li>修复：读取设置出错</li>
+<li>修复：设置窗口显示模式/大小时意外修改了原设置（排查结果：<strong>浅拷贝引用</strong>造成意外的数据修改）</li>
+<li>优化：默认包取消显示包名</li>
+<li>优化：统一设置获取接口</li>
+</ul>
+</li>
+<li><code>DLC</code>:<ul>
+<li>增加：包可展示的信息更多了（作者，版本，网址，描述……）</li>
+<li>计划：激活/关闭包的逻辑</li>
+</ul>
+</li>
+<li><code>CharacterCreate</code>:<ul>
+<li>增加：基本场景</li>
+</ul>
+</li>
+<li><code>GUIModel</code>:<ul>
+<li>增加： <code>CharacterCreateGUI</code></li>
+<li>增加： <code>pauseMenu</code></li>
+</ul>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 6, 2023 17:40:15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 8, 2023 16:48:26</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 6, 2023 17:40:15</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 8, 2023 16:48:26</span>
       
     
   </small>
 </div>
 
 
-
-  
 
 
 
@@ -1302,8 +1367,6 @@
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
@@ -1322,6 +1385,22 @@
             </div>
           </a>
         
+        
+          
+          <a href="Enlightenment/" class="md-footer__link md-footer__link--next" aria-label="下一页: 启明本体包" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                启明本体包
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
         
       </nav>
     

@@ -12,28 +12,28 @@
         <meta name="author" content="Nick wald">
       
       
-        <link rel="canonical" href="https://nick-wald.github.io/Enlightenment/0.1/guide/developer/package/">
+        <link rel="canonical" href="https://nick-wald.github.io/Enlightenment/0.1/updateLog/Enlightenment2D/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../Enlightenment/">
       
       
-        <link rel="next" href="../../EnlightenmentRPG/">
+        <link rel="next" href="../Enlightenment3D/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
-        <title>包 - Enlightenment启明引擎开发文档</title>
+        <title>启明2D包 - Enlightenment启明引擎开发文档</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,11 +80,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#包" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +91,7 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   您现在观看的文档并非最新版！
-  <a href="../../../..">
+  <a href="../../..">
     <strong>点我跳转至最新版</strong>
   </a>
 
@@ -113,7 +108,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Enlightenment启明引擎开发文档" class="md-header__button md-logo" aria-label="Enlightenment启明引擎开发文档" data-md-component="logo">
+    <a href="../.." title="Enlightenment启明引擎开发文档" class="md-header__button md-logo" aria-label="Enlightenment启明引擎开发文档" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -133,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              包
+              启明2D包
             
           </span>
         </div>
@@ -252,7 +247,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
     
@@ -268,13 +263,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../guide/" class="md-tabs__link">
           
   
     
@@ -294,7 +287,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ref/" class="md-tabs__link">
+        <a href="../../ref/" class="md-tabs__link">
           
   
     
@@ -314,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../HowToBuildDocs/" class="md-tabs__link">
+        <a href="../../HowToBuildDocs/" class="md-tabs__link">
           
   
     
@@ -334,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+        <a href="../../blog/" class="md-tabs__link">
           
   
     
@@ -350,11 +343,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../updateLog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -395,7 +390,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Enlightenment启明引擎开发文档" class="md-nav__button md-logo" aria-label="Enlightenment启明引擎开发文档" data-md-component="logo">
+    <a href="../.." title="Enlightenment启明引擎开发文档" class="md-nav__button md-logo" aria-label="Enlightenment启明引擎开发文档" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -445,7 +440,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../.." class="md-nav__link ">
+            <a href="../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -477,8 +472,6 @@
       
   
   
-    
-  
   
     
     
@@ -493,18 +486,20 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../guide/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -520,7 +515,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             起步
@@ -533,8 +528,6 @@
                 
   
   
-    
-  
   
     
     
@@ -549,18 +542,20 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../guide/developer/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -576,7 +571,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             开发者指南
@@ -589,18 +584,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../guide/developer/package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -609,7 +595,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -654,7 +639,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../EnlightenmentRPG/" class="md-nav__link ">
+            <a href="../../guide/EnlightenmentRPG/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -685,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../EnlightenmentRPG/Step1/" class="md-nav__link">
+      <a href="../../guide/EnlightenmentRPG/Step1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -743,7 +728,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ref/" class="md-nav__link ">
+            <a href="../../ref/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -774,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ref/AutoLoad/" class="md-nav__link">
+      <a href="../../ref/AutoLoad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../HowToBuildDocs/" class="md-nav__link">
+      <a href="../../HowToBuildDocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +876,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../blog/" class="md-nav__link ">
+            <a href="../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -922,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -947,6 +932,8 @@
       
   
   
+    
+  
   
     
     
@@ -963,20 +950,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../updateLog/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -992,7 +977,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             更新日志
@@ -1007,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../updateLog/Enlightenment/" class="md-nav__link">
+      <a href="../Enlightenment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,9 +1010,16 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../updateLog/Enlightenment2D/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1036,6 +1028,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1047,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../updateLog/Enlightenment3D/" class="md-nav__link">
+      <a href="../Enlightenment3D/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1085,8 +1078,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -1099,20 +1090,9 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
-<nav class="md-tags" >
-  
-    
-    
-    
-      <a href="../../../tags/#指南" class="md-tag">指南</a>
-    
-  
-</nav>
-
 
   
-    <a href="https://github.com/Nick-wald/Enlightenment/edit/docs/docs/guide/developer/package.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Nick-wald/Enlightenment/edit/docs/docs/updateLog/Enlightenment2D.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -1121,30 +1101,27 @@
     
       
     
-    <a href="https://github.com/Nick-wald/Enlightenment/raw/docs/docs/guide/developer/package.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Nick-wald/Enlightenment/raw/docs/docs/updateLog/Enlightenment2D.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-<h1 id="包">包<a class="headerlink" href="#包" title="固定链接">&para;</a></h1>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p>歌伶的把戏是不足以娱神灵的。</p>
-<p>——《文学评论》弗莱彻·西修里（艺术委员会，首席）</p>
-</div>
+  <h1>启明2D包</h1>
+
+
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 6, 2023 16:48:45</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 8, 2023 16:48:26</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 6, 2023 15:31:15</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 8, 2023 16:48:26</span>
       
     
   </small>
@@ -1153,54 +1130,6 @@
 
 
 
-
-  <h2 id="__comments">评论</h2>
-  <!-- Insert generated snippet here -->
-    <script src="https://giscus.app/client.js"
-            data-repo="Nick-wald/Enlightenment"
-            data-repo-id="R_kgDOKIMA4w"
-            data-category="Announcements"
-            data-category-id="DIC_kwDOKIMA484CYqlZ"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="top"
-            data-theme="preferred_color_scheme"
-            data-lang="zh-CN"
-            data-loading="lazy"
-            crossorigin="anonymous"
-            async>
-    </script>
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    /* Set palette on initial load */
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme)
-    }
-
-    /* Register event handlers after documented loaded */
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate" ? "dark" : "light"
-
-          /* Instruct Giscus to change theme */
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
 
                 
               </article>
@@ -1224,7 +1153,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 开发者指南" rel="prev">
+          <a href="../Enlightenment/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 启明本体包" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -1234,20 +1163,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                开发者指南
+                启明本体包
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../EnlightenmentRPG/" class="md-footer__link md-footer__link--next" aria-label="下一页: EnlightenmentRPG制作例程" rel="next">
+          <a href="../Enlightenment3D/" class="md-footer__link md-footer__link--next" aria-label="下一页: 启明3D包" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                EnlightenmentRPG制作例程
+                启明3D包
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1299,12 +1228,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "toc.follow", "header.autohide"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"default": ["stable", "latest", "development"], "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "toc.follow", "header.autohide"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"default": ["stable", "latest", "development"], "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
